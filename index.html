@@ -251,10 +251,11 @@ body::-webkit-scrollbar{ display:none; }
 
 
 .loaderSpinner {
-  width: 200px;              
+  width: 200px;
   height: 200px;
-  background: url('cargando.gif') center center no-repeat;
-  background-size: contain; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 6px auto;
 }
 
@@ -264,7 +265,9 @@ body::-webkit-scrollbar{ display:none; }
 <div id="pageLoader" role="status" aria-live="polite" aria-label="Cargando imágenes">
   <div id="loaderBox">
     <div id="loaderLogo">Cargando Árbol Evolutivo</div>
-    <div class="loaderSpinner" aria-hidden="true"></div>
+  <div class="loaderSpinner">
+  <img src="cargando.gif" alt="Cargando..." width="200" height="200">
+</div>
     <div id="loaderText">Simulando Universo...</div>
     <div class="progressWrap" aria-hidden="false">
       <div class="progressBar" id="progressBar"></div>
