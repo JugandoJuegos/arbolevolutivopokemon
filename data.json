@@ -885,6 +885,10 @@
                         {
                           "icon": "Pokémon_Perla_Reluciente Icono.png",
                           "description": "Vive en la capa de ozono, mucho más allá de las nubes, por lo que no es posible avistarlo desde el suelo."
+                        },
+                        {
+                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                          "description": "Rayquaza: Vive en la capa de ozono, mucho más allá de las nubes, por lo que no es posible verlo desde el suelo.\n\nMega-Rayquaza: A veces, lo que parece una estrella fugaz en el cielo nocturno podría ser Mega-Rayquaza volando tras un meteorito."
                         }
                       ]
                     },
@@ -1415,7 +1419,7 @@
                         },
                         {
                           "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                          "description": "El núcleo rojo que tiene en el centro del cuerpo emite extrañas señales de radio hacia el cielo nocturno."
+                          "description": "Starmie: El núcleo rojo que tiene en el centro del cuerpo emite extrañas señales de radio hacia el cielo nocturno.\n\nMega-Starmie: Sus movimientos se volvieron más humanos. Se desconoce si es para comunicarse con las personas o si busca reemplazar a la humanidad."
                         }
                       ]
                     },
@@ -1566,6 +1570,10 @@
                         {
                           "icon": "Pokémon Púrpura Icono.jpg",
                           "description": "Es como un peluche suave, tan agradable al tacto que, cuando alguien lo toca, no puede dejar de acariciarlo."
+                        },
+                        {
+                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                          "description": "Su pelaje es tan suave que, si dos de ellos se acurrucan juntos, no querrán separarse nunca."
                         }
                       ]
                     },
@@ -1726,7 +1734,7 @@
                         },
                         {
                           "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                          "description": "Este Pokémon de aspecto feérico, raramente visto por los humanos, corre a esconderse en cuanto detecta que hay alguien cerca."
+                          "description":"Clefable: Este Pokémon de aspecto feérico, raramente visto por los humanos, corre a esconderse en cuanto detecta que hay alguien cerca.\n\nMega-Clefable: Se desplaza flotando gracias al poder de la luz lunar, que le permite controlar la gravedad en un radio de 10 m."
                         }
                       ]
                     },
@@ -2204,7 +2212,7 @@
                         },
                         {
                           "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                          "description": "Está formado por varios Metang. Con cuatro cerebros, tiene la inteligencia de una supercomputadora."
+                          "description": "Metagross: Está formado por varios Metang. Con cuatro cerebros, tiene la inteligencia de una supercomputadora.\n\nMega-Metagross: Este Pokémon es el resultado de la combinación entre un Metagross, un Metang y dos Beldum."
                         }
                       ]
                     },
@@ -3135,7 +3143,10 @@
                     },
                     {
                       "name": "Darkrai",
-                      "image": "Darkrai.png",
+                      "images": [
+                        "Darkrai.png",
+                        "Mega Darkrai.png"
+                      ],
                       "description": "El Pokémon oscuridad.",
                       "imgWidth": 150,
                       "imgHeight": 150,
@@ -3208,6 +3219,10 @@
                         {
                           "icon": "Leyendas_Pokémon_Arceus Icono.png",
                           "description": "En una ocasión, durante una noche de luna nueva, todos los habitantes de un mismo asentamiento sufrieron pesadillas colectivas en las que aparecía este Pokémon."
+                        },
+                        {
+                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                          "description": "Darkrai: Puede dormir profundamente a la gente y hacerlos soñar. Está activo en las noches de luna nueva.\n\nMega-Darkrai: Su poder oscuro cubre el sol y sume en tinieblas todo a su alrededor. Nada ni nadie puede escapar de su ojo maligno."
                         }
                       ]
                     },
@@ -3376,7 +3391,7 @@
                             },
                             {
                               "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                              "description": "Sus llamas absorben y abrasan el alma de quien envuelvan, y solo queda su cuerpo inerte."
+                              "description": "Chandelure: Sus llamas absorben y abrasan el alma de quien envuelvan, y solo queda su cuerpo inerte.\n\nMega-Chandelure: Uno de sus ojos sirve como ventana al más allá. Atrae hacia sí mismo los sentimientos de rencor de otros seres y los transforma en poder."
                             }
                           ]
                         }
@@ -4186,7 +4201,7 @@
                             },
                             {
                               "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                              "description": "Genera ventiscas con las que cubre de nieve grandes áreas. Se conoce como el Monstruo de Hielo."
+                              "description": "Abomasnow: Genera ventiscas con las que cubre de nieve grandes áreas. Se conoce como el Monstruo de Hielo.\n\nMega-Abomasnow: De los capullos de la espalda le brotaron unos imponentes carámbanos, los cuales usa para generar temibles ventiscas a −30 ºC."
                             }
                           ]
                         }
@@ -5771,7 +5786,7 @@
                                         },
                                         {
                                           "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                          "description": "Sus jugos gástricos son capaces de disolver completamente cualquier cosa que ingiera, por más dura que sea."
+                                          "description": "Victreebel: Sus jugos gástricos son capaces de disolver completamente cualquier cosa que ingiera, por más dura que sea.\n\nMega-Victreebel: Tras la megaevolución, su volumen de ácido aumentó hasta llenarle la boca por completo. Si se descuida, se le derrama."
                                         }
                                       ]
                                     }
@@ -5792,7 +5807,10 @@
                                       "children": [
                                         {
                                           "name": "Scovillain",
-                                          "image": "Scovillain.png",
+                                          "images": [
+                                          "Scovillain.png",
+                                          "Mega Scovillain.png"
+                                          ],
                                           "description": "El Pokémon habanero.",
                                           "imgWidth": 150,
                                           "imgHeight": 150,
@@ -5809,6 +5827,10 @@
                                             {
                                               "icon": "Pokémon Púrpura Icono.jpg",
                                               "description": "La cabeza verde es mucho más despiadada por el efecto de los capsaicinoides sobre su cerebro. Cuando enloquece, no hay forma de detenerla."
+                                            },
+                                            {
+                                              "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                              "description": "Scovillain: La personalidad y la forma de combatir de cada cabeza son distintas, pero, a la hora de luchar, se compenetran a la perfección.\n\nMega-Scovillain: La megaevolución aumenta su nivel de picante. Golpea con fuerza al rival sacudiendo la parte de su cuerpo que se asemeja a una corbata."
                                             }
                                           ]
                                         },
@@ -6433,6 +6455,10 @@
                         {
                           "icon": "Pokémon Púrpura Icono.jpg",
                           "description": "Intenta hacerse pasar por una Poké Ball, aunque se desconoce si logra engañar a otros Pokémon."
+                        },
+                        {
+                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                          "description": "Aunque intenta hacerse pasar por una Pokébola con su píleo para atraer a sus presas, no logra engañar a muchos."
                         }
                       ]
                     },
@@ -7280,6 +7306,10 @@
                                                 {
                                                   "icon": "Pokémon_Escudo_Icono.png",
                                                   "description": "Se aventura en tierra firme para buscar rivales contra los que luchar para medir su valía. Tras terminar el combate, regresa al mar."
+                                                },
+                                                {
+                                                  "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                  "description": "Utiliza sus portentosos tentáculos para sujetar a sus rivales contra el suelo, impidiéndole hasta a los Pokémon de mayor fuerza liberarse y huir."
                                                 }
                                               ]
                                             }
@@ -7342,7 +7372,7 @@
                                             },
                                             {
                                               "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                              "description": "Posee el poder hipnótico más poderoso de todos los Pokémon. Controla al enemigo a su voluntad."
+                                              "description": "Malamar: Posee el poder hipnótico más poderoso de todos los Pokémon. Controla al enemigo a su voluntad.\n\nMega-Malamar: Manipula la personalidad y los recuerdos del enemigo con destellos de colores llamativos y lo controla a su voluntad."
                                             }
                                           ]
                                         }
@@ -7941,6 +7971,10 @@
                                             {
                                               "icon": "Pokémon Púrpura Icono.jpg",
                                               "description": "Se traga todo lo que le quepa en su enorme boca. Sus jugos gástricos pueden digerir cualquier cosa."
+                                            },
+                                            {
+                                              "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                              "description": "Engulle cualquier cosa de un bocado. Segrega un líquido tóxico por los poros que daña al enemigo."
                                             }
                                           ]
                                         },
@@ -8751,7 +8785,7 @@
                                         },
                                         {
                                           "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                          "description": "Sujeta a sus presas con las garras que le sobresalen del cuello hasta inmovilizarlas y luego las remata con veneno."
+                                          "description": "Scolipede: Sujeta a sus presas con las garras que le sobresalen del cuello hasta inmovilizarlas y luego las remata con veneno.\n\nMega-Scolipede: Su potente veneno, que desprende una luz tenue, le afectó la mente e incrementó aún más su agresividad."
                                         }
                                       ]
                                     }
@@ -8933,7 +8967,7 @@
                                                 },
                                                 {
                                                   "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                  "description": "Si bien todas las extremidades de Barbaracle tienen cerebro propio y se mueven a su antojo, suelen seguir las órdenes que imparte la cabeza."
+                                                  "description": "Barbaracle: Si bien todas las extremidades de Barbaracle tienen cerebro propio y se mueven a su antojo, suelen seguir las órdenes que imparte la cabeza.\n\nMega-Barbaracle: Puede distraer a sus adversarios con sus numerosos brazos, pero es una ardua tarea para el Barbaracle de la cabeza."
                                                 }
                                               ]
                                             }
@@ -8947,7 +8981,10 @@
                                           "children": [
                                             {
                                               "name": "Golisopod",
-                                              "image": "Golisopod.png",
+                                              "images": [
+                                                "Golisopod.png",
+                                                "Mega Golisopod.png"
+                                              ],
                                               "description": "El Pokémon blindaje.",
                                               "imgWidth": 150,
                                               "imgHeight": 150,
@@ -8980,6 +9017,10 @@
                                                 {
                                                   "icon": "Pokémon_Escudo_Icono.png",
                                                   "description": "Vive en cavernas del fondo marino o en barcos hundidos. Lucha contra los Grapploct y el que pierde se convierte en una suculenta presa."
+                                                },
+                                                {
+                                                  "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                  "description": "Golisopod: Gracias a su destreza y a sus enormes y afiladas garras, puede cortar hasta el aire y el agua en un solo movimiento.\n\nMega-Golisopod: Ataca sin piedad con cuatro garras y, cuando tiene al rival contra las cuerdas, da el golpe de gracia con otro par que permanecía oculto."
                                                 }
                                               ]
                                             },
@@ -9162,7 +9203,10 @@
                                                       "children": [
                                                         {
                                                           "name": "Crabominable",
-                                                          "image": "Crabominable.png",
+                                                          "images": [
+                                                            "Crabominable.png",
+                                                            "Mega Crabominable.png"
+                                                          ],
                                                           "description": "El Pokémon cangrejopelo.",
                                                           "imgWidth": 200,
                                                           "imgHeight": 200,
@@ -9195,6 +9239,10 @@
                                                             {
                                                               "icon": "Pokémon Púrpura Icono.jpg",
                                                               "description": "Sus puñetazos son temibles, pero se mueve muy lentamente. Escupe burbujas gélidas a sus rivales para inmovilizarlos."
+                                                            },
+                                                            {
+                                                              "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                              "description": "Crabominable: No lo piensa dos veces antes de golpear. Hay registros de que sus puñetazos frenéticos detuvieron aludes.\n\nMega-Crabominable: Sus pinzas, ahora recubiertas de una gruesa capa de hielo, son como puños capaces de pulverizar el hormigón armado de un solo y rápido golpe."
                                                             }
                                                           ]
                                                         },
@@ -9813,6 +9861,10 @@
                                                         {
                                                           "icon": "Pokémon Púrpura Icono.jpg",
                                                           "description": "Un Pokémon violento, tosco y rudo. Blande sus enormes y pesadas hachas de piedra para acabar con sus presas."
+                                                        },
+                                                        {
+                                                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                          "description": "En los combates más violentos se desprenden esquirlas de sus hachas de piedra, lo que provoca que estas se afilen cada vez más."
                                                         }
                                                       ]
                                                     },
@@ -9961,7 +10013,7 @@
                                                         },
                                                         {
                                                           "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                          "description": "Su cuerpo es duro como el acero. Intimida a sus enemigos gracias a los dibujos con forma de ojos en sus pinzas."
+                                                          "description": "Scizor: Su cuerpo es duro como el acero. Intimida a sus enemigos gracias a los dibujos con forma de ojos en sus pinzas.\n\nMega-Scizor: La megaevolución convirtió sus pinzas en instrumentos atroces, capaces de hacer trizas todo lo que cae en ellas."
                                                         }
                                                       ]
                                                     }
@@ -10695,7 +10747,7 @@
                                                                 },
                                                                 {
                                                                   "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                  "description": "A veces forma enjambres. Revolotea a gran velocidad y ataca clavando repetidas veces el aguijón venenoso que tiene en el abdomen."
+                                                                  "description": "Beedrill: A veces forma enjambres. Revolotea a gran velocidad y ataca clavando repetidas veces el aguijón venenoso que tiene en el abdomen.\n\nMega-Beedrill: Al megaevolucionar, también le salen aguijones venenosos en las patas posteriores. Primero ataca con los de las patas y luego con el del abdomen."
                                                                 }
                                                               ]
                                                             }
@@ -11380,7 +11432,7 @@
                                                                             },
                                                                             {
                                                                               "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                              "description": "Este fuerte Pokémon clava su preciado cuerno bajo el estómago del enemigo para luego levantarlo y arrojarlo."
+                                                                              "description": "Heracross: Este fuerte Pokémon clava su preciado cuerno bajo el estómago del enemigo para luego levantarlo y arrojarlo.\n\nMega-Heracross: Es capaz de encajar entre sus dos cuernos objetos que superen su peso 500 veces y levantarlos sin problema."
                                                                             }
                                                                           ]
                                                                         },
@@ -11603,7 +11655,7 @@
                                                                                 },
                                                                                 {
                                                                                   "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                  "description": "Arremete violentamente con su cornamenta. Cuando llega el frío, se adentra en los bosques."
+                                                                                  "description": "Pinsir: Arremete violentamente con su cornamenta. Cuando llega el frío, se adentra en los bosques.\n\nMega-Pinsir: Gracias a la megaevolución, ahora puede volar. Tal vez su alegría es la razón por la cual apenas se posa en tierra firme."
                                                                                 }
                                                                               ]
                                                                             }
@@ -12898,7 +12950,10 @@
                                                 },
                                                 {
                                                   "name": "Chimecho",
-                                                  "image": "Chimecho.png",
+                                                  "images": [
+                                                    "Chimecho.png",
+                                                    "Mega Chimecho.png"
+                                                  ],
                                                   "description": "El Pokémon campanilla.",
                                                   "imgWidth": 150,
                                                   "imgHeight": 150,
@@ -12999,6 +13054,10 @@
                                                     {
                                                       "icon": "Pokémon Púrpura Icono.jpg",
                                                       "description": "Los gritos que resuenan en su cuerpo hueco emergen como hermosas notas que sorprenden y ahuyentan a los enemigos."
+                                                    },
+                                                    {
+                                                      "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                      "description": "Chimeco: Sus gritos sacuden el aire para que sus rivales salgan volando. Se comunican entre sí entonando siete tipos de gritos diferentes.\n\nMega-Chimeco: Agita el cuerpo para producir ondas sonoras con las que ataca en todas direcciones. Quienes las oyen se desorientan y no recuerdan quiénes son."
                                                     }
                                                   ]
                                                 }
@@ -13232,6 +13291,10 @@
                                                     {
                                                       "icon": "Pokémon Púrpura Icono.jpg",
                                                       "description": "Forma encubierta: No hace mucho que se comprendió que se trata de un Pokémon. Hasta entonces, se pensaba que era un fantasma cubierto con un saco.\n\nForma descubierta: No puede mantener firme la cabeza del disfraz tras haber recibido daño. Jamás olvida a quien lo ha herido."
+                                                    },
+                                                    {
+                                                      "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                      "description": "Forma encubierta: El saco andrajoso le permite ocultar su aspecto aterrador para acercarse a otros Pokémon o a la gente y vencer así la soledad que lo atormenta.\n\nForma descubierta: Le entristece que pueda descubrirse su identidad. Jamás perdona a quienes rompen su disfraz y no descansa hasta vengarse."
                                                     }
                                                   ]
                                                 },
@@ -14111,7 +14174,7 @@
                                             },
                                             {
                                               "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                              "description": "Nada a velocidades de 120 km/h al expulsar agua marina por la parte trasera para propulsarse. Se conoce como el Terror de los Mares."
+                                              "description": "Sharpedo: Nada a velocidades de 120 km/h al expulsar agua marina por la parte trasera para propulsarse. Se conoce como el Terror de los Mares.\n\nMega-Sharpedo: Si las filas de colmillos que le flanquean la cabeza se quiebran, se regenerarán cuantas veces sea necesario."
                                             }
                                           ]
                                         },
@@ -14119,7 +14182,8 @@
                                           "name": "Garchomp",
                                           "images": [
                                             "Garchomp.png",
-                                            "Mega Garchomp.png"
+                                            "Mega Garchomp.png",
+                                            "Mega Garchomp Z.png"
                                           ],
                                           "description": "El Pokémon mach.",
                                           "imgWidth": 150,
@@ -14228,7 +14292,7 @@
                                             },
                                             {
                                               "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                              "description": "Vuela tan rápido como un avión de combate. Nunca se le escapa una presa."
+                                              "description": "Garchomp: Vuela tan rápido como un avión de combate. Nunca se le escapa una presa.\n\nMega-Garchomp: La megaevolución exacerba su agresividad. Hace trizas al enemigo con sus extremidades en forma de guadañas.\n\nMega-Garchomp Z: Tras esta nueva megaevolución, vuela a velocidad supersónica y despedaza a los rivales con las ominosas garras de sus alas."
                                             }
                                           ]
                                         }
@@ -14921,7 +14985,7 @@
                                                         },
                                                         {
                                                           "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                          "description": "Existen escritos antiguos que narran cómo un Gyarados redujo a cenizas un poblado que había sido consumido por la violencia."
+                                                          "description": "Gyarados: Existen escritos antiguos que narran cómo un Gyarados redujo a cenizas un poblado que había sido consumido por la violencia.\n\nMega-Gyarados: Expulsa agua a presión por las agallas de sus costados para así poder volar sobre la superficie del agua a una velocidad supersónica."
                                                         }
                                                       ]
                                                     }
@@ -14964,6 +15028,10 @@
                                                                 {
                                                                   "icon": "Pokémon Púrpura Icono.jpg",
                                                                   "description": "Idolatra a Tatsugiri y lo trata como a un líder. Posee una fuerza descomunal, pero no destaca precisamente por su gran intelecto."
+                                                                },
+                                                                {
+                                                                  "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                  "description": "Es capaz de crear olas gigantescas al revolcarse gracias a su fuerza titánica y su enorme cuerpo, pero es un pésimo cazador."
                                                                 }
                                                               ]
                                                             },
@@ -15156,7 +15224,7 @@
                                                             },
                                                             {
                                                               "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                              "description": "Se pega a su presa con la ventosa de su boca y luego la electrocuta al clavarle los colmillos."
+                                                              "description": "Eelektross: Se pega a su presa con la ventosa de su boca y luego la electrocuta al clavarle los colmillos.\n\nMega-Eelektross: Genera diez veces más electricidad que antes de megaevolucionar. Libera descargas a través de los Eelektrik falsos que crea con su secreción."
                                                             }
                                                           ]
                                                         }
@@ -15401,6 +15469,10 @@
                                                             {
                                                               "icon": "Pokémon Púrpura Icono.jpg",
                                                               "description": "Habita en lo más profundo de lagos de agua cristalina. En tiempos de guerra, aparece para calmar el corazón de la gente."
+                                                            },
+                                                            {
+                                                              "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                              "description": "Vive en lo más profundo de los grandes lagos. Se dice que su gran belleza purifica el corazón de quienes lo contemplen."
                                                             }
                                                           ]
                                                         }
@@ -15598,7 +15670,7 @@
                                                                 },
                                                                 {
                                                                   "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                  "description": "Ataca de manera indiscriminada a quien entre en su territorio y le lanza escupitajos con un virulento veneno que puede corroer hasta el casco de un petrolero."
+                                                                  "description": "Dragalge: Ataca de manera indiscriminada a quien entre en su territorio y le lanza escupitajos con un virulento veneno que puede corroer hasta el casco de un petrolero.\n\nMega-Dragalge: La sustancia que escupe trastorna el poder regenerativo de las células, y es altamente tóxica para todos menos para él mismo."
                                                                 }
                                                               ]
                                                             }
@@ -16066,6 +16138,10 @@
                                                                             {
                                                                               "icon": "Pokémon Púrpura Icono.jpg",
                                                                               "description": "Los pescadores veteranos aconsejan pescarlo justo después de que arroje sus púas tóxicas, pues es cuando se encuentra indefenso."
+                                                                            },
+                                                                            {
+                                                                              "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                              "description": "Para arrojar sus púas tóxicas, infla su cuerpo bebiendo hasta diez litros de agua de una sola vez."
                                                                             }
                                                                           ]
                                                                         },
@@ -16092,6 +16168,10 @@
                                                                             {
                                                                               "icon": "Pokémon Púrpura Icono.jpg",
                                                                               "description": "Posee un carácter feroz y agresivo. Las puntas de sus púas venenosas son dentadas, por lo que no resulta fácil extraerlas una vez que se clavan."
+                                                                            },
+                                                                            {
+                                                                              "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                              "description": "Sus púas tóxicas se han vuelto más gruesas, largas y reforzadas. Atacan por sí solas a todo lo que se mueve."
                                                                             }
                                                                           ]
                                                                         }
@@ -16360,7 +16440,10 @@
                                                           "images": [
                                                             "Tatsugiri curvada.png",
                                                             "Tatsugiri lánguida.png",
-                                                            "Tatsugiri recta.png"
+                                                            "Tatsugiri recta.png",
+                                                            "Mega Tatsugiri curvada.png",
+                                                            "Mega Tatsugiri lánguida.png",
+                                                            "Mega Tatsugiri recta.png"
                                                           ],
                                                           "description": "El Pokémon mimetismo.",
                                                           "imgWidth": 150,
@@ -16378,6 +16461,10 @@
                                                             {
                                                               "icon": "Pokémon Púrpura Icono.jpg",
                                                               "description": "Forma curvada: Es un Pokémon de gran astucia. Atrae a sus presas fingiendo estar débil para otorgarle a su compañero la oportunidad de atacar.\n\nForma lánguida: Se hace el muerto para engañar a sus oponentes. Es pequeño y débil, pero se vale de su astucia para sobrevivir.\n\nForma recta: Uno de los Pokémon dragón más inteligentes que existen. Hincha su saco gular para camuflarse."
+                                                            },
+                                                            {
+                                                               "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                               "description": "Forma curvada: Libra grandes batallas contra sus congéneres por el control del Dondozo que se convertirá en su compañero.\n\nForma lánguida: Si algún enemigo lo engulle, infla el saco gular para tratar de escapar.\n\nForma recta: Su agudeza mental le permite evaluar la situación en combate rápidamente. Si concluye que no hay probabilidad de victoria, huye a toda prisa.\n\nMega-Tatsugiri (forma curvada): La megaevolución le estimula el cerebro y lo vuelve aún más astuto. Puede crear y controlar hábilmente copias de sí mismo.\n\nMega-Tatsugiri (forma lánguida): Solidifica la energía de la megaevolución y la libera en forma de esferas que explotan al más mínimo contacto.\n\nMega-Tatsugiri (forma recta): Usa la energía de la megaevolución para crear un transporte vagamente parecido a una bandeja con el que puede desplazarse libremente por el aire."
                                                             }
                                                           ]
                                                         }
@@ -16548,7 +16635,7 @@
                                                         },
                                                         {
                                                           "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                          "description": "Su rabia es devastadora. Si se enfada, se pone a volar y lanza llamas para incendiar campos y montañas."
+                                                          "description": "Salamence: Su rabia es devastadora. Si se enfada, se pone a volar y lanza llamas para incendiar campos y montañas.\n\nMega-Salamence: Introduce sus patas delanteras en la parte frontal de su coraza para surcar el aire a gran velocidad sin importar las características del terreno."
                                                         }
                                                       ]
                                                     },
@@ -16629,6 +16716,10 @@
                                                         {
                                                           "icon": "Pokémon Púrpura Icono.jpg",
                                                           "description": "Toxtricity agudo: Cuando rasga con fuerza las protuberancias que tiene en el pecho, libera unas descargas que superan con facilidad los 15 000 V.\n\nToxtricity grave: Cuando produce electricidad en su cuerpo tras beber agua estancada, emite un sonido rítmico similar al de un bajo que resuena a su alrededor."
+                                                        },
+                                                        {
+                                                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                          "description": "Toxtricity agudo: Cuando se rasga las protuberancias del pecho para generar electricidad, emite un sonido similar al de una guitarra, que reverbera en el entorno.\n\nToxtricity grave: Posee un órgano en el pecho que genera electricidad. Al hacerlo, emite un sonido que recuerda al de un bajo eléctrico."
                                                         }
                                                       ]
                                                     },
@@ -16886,6 +16977,10 @@
                                                         {
                                                           "icon": "Pokémon Púrpura Icono.jpg",
                                                           "description": "Tiene unos brazos duros como la roca, con los que puede dejar molido al enemigo de un solo golpe. Construye su nido en playas bonitas."
+                                                        },
+                                                        {
+                                                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                          "description": "Swampert: Su gran fuerza le permite nadar arrastrando un barco de gran tamaño. Con sus gruesos brazos puede derrotar a sus rivales de un solo golpe.\n\nMega-Swampert: Siguiendo los principios de una bomba hidráulica, utiliza el agua de su cuerpo para fortalecer aún más sus ya de por sí desarrollados músculos."
                                                         }
                                                       ]
                                                     }
@@ -17096,7 +17191,7 @@
                                                         },
                                                         {
                                                           "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                          "description": "Comprime el agua y crea estrellas ninja con las que ataca al enemigo. Cuando las hace girar a gran velocidad, cortan en dos hasta el metal."
+                                                          "description": "Greninja: Comprime el agua y crea estrellas ninja con las que ataca al enemigo. Cuando las hace girar a gran velocidad, cortan en dos hasta el metal.\n\nMega-Greninja: Hace girar un enorme shuriken a tal velocidad que queda suspendido en el aire, y se adhiere a él boca abajo para atacar por sorpresa al enemigo."
                                                         }
                                                       ]
                                                     },
@@ -17260,7 +17355,7 @@
                                                         },
                                                         {
                                                           "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                          "description": "Después de un día de lluvia, el aroma de la flor que tiene en el lomo se intensifica y atrae a otros Pokémon."
+                                                          "description": "Venuasur: Después de un día de lluvia, el aroma de la flor que tiene en el lomo se intensifica y atrae a otros Pokémon.\n\nMega-Venusaur: Sus patas y lomo se fortalecieron para soportar el peso de la flor, que creció considerablemente tras la megaevolución."
                                                         }
                                                       ]
                                                     },
@@ -17717,6 +17812,10 @@
                                                             {
                                                               "icon": "Pokémon Púrpura Icono.jpg",
                                                               "description": "Las hojas que le crecen en los brazos están afiladas como cuchillas. Ataca a sus enemigos saltando grácilmente de rama en rama."
+                                                            },
+                                                            {
+                                                              "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                              "description": "Sceptile: Las hojas de sus brazos son tan afiladas que pueden cortar gruesos árboles. Es invencible cuando combate en la selva.\n\nMega-Sceptile: Hace detonar las semillas del lomo, cargadas con la energía de la megaevolución, para disparar la punta de la cola como si fuera un proyectil."
                                                             }
                                                           ]
                                                         },
@@ -17886,7 +17985,7 @@
                                                                     },
                                                                     {
                                                                       "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                      "description": "Se dice que vive en algún lugar del mar. Guía a la costa a las tripulaciones de los barcos que naufragaron."
+                                                                      "description": "Dragonite: Se dice que vive en algún lugar del mar. Guía a la costa a las tripulaciones de los barcos que naufragaron.\n\nMega-Dragonite: La energía de la megaevolución eleva su piedad hasta niveles inusitados. Demuestra una gran misericordia al dar el golpe de gracia a sus rivales."
                                                                     }
                                                                   ]
                                                                 },
@@ -18027,7 +18126,7 @@
                                                                     },
                                                                     {
                                                                       "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                      "description": "Es de naturaleza dócil, pero, si lo provocan y se enfurece, destruye todo lo que lo rodea con su aliento devastador."
+                                                                      "description": "Drampa: Es de naturaleza dócil, pero, si lo provocan y se enfurece, destruye todo lo que lo rodea con su aliento devastador.\n\nMega-Drampa: Las células de su cuerpo se regeneraron, por lo que recuperó la juventud. Es capaz de manipular la atmósfera para invocar tormentas."
                                                                     }
                                                                   ]
                                                                 },
@@ -18207,7 +18306,7 @@
                                                                         },
                                                                         {
                                                                           "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                          "description": "Vive en las profundidades de las cavernas, desde donde se dice que vigila a todos aquellos que se dediquen a destruir el ecosistema."
+                                                                          "description": "Forma 10%: Zygarde asume esta forma al reunir el 10 % de sus células. Se abalanza sobre su oponente y lo hace trizas con sus afilados colmillos.\n\nForma 50%: Vive en las profundidades de las cavernas, desde donde se dice que vigila a todos aquellos que se dediquen a destruir el ecosistema.\n\nForma completa: Zygarde adopta esta forma al reunir el 100 % de sus células. Con su fuerza, derrota a quienquiera que amenace el ecosistema.\n\nMega-Zygarde: En una crisis sin precedentes, megaevoluciona en respuesta a las emociones de la gente. Controla cualquier situación con su fuerza sin igual."
                                                                         }
                                                                       ]
                                                                     }
@@ -18321,6 +18420,10 @@
                                                                     {
                                                                       "icon": "Pokémon Púrpura Icono.jpg",
                                                                       "description": "Le une una relación de enemistad con Zangoose. Se lima con las rocas su cola en forma de espada para tenerla afilada."
+                                                                    },
+                                                                    {
+                                                                      "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                      "description": "Se enfrenta a la agilidad de Zangoose con su afilada cola, que está cargada con un veneno letal."
                                                                     }
                                                                   ]
                                                                 },
@@ -18602,6 +18705,10 @@
                                                                     {
                                                                       "icon": "Pokémon Púrpura Icono.jpg",
                                                                       "description": "Puede correr a 120 km/h con una persona a cuestas. El calor corporal del jinete calienta su lomo y le da energía."
+                                                                    },
+                                                                    {
+                                                                      "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                      "description": "Es capaz de correr largas distancias con una persona en su lomo gracias a la energía que acumula en el pliegue gular."
                                                                     }
                                                                   ]
                                                                 },
@@ -18710,6 +18817,10 @@
                                                                         {
                                                                           "icon": "Pokémon_Perla_Reluciente Icono.png",
                                                                           "description": "Puede cambiar el color de su cuerpo a voluntad, pero el dibujo en zigzag de su panza siempre permanece igual."
+                                                                        },
+                                                                        {
+                                                                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                          "description": "Acecha a sus presas adaptando sus colores a los del paisaje, pero la marca de su panza nunca cambia."
                                                                         }
                                                                       ]
                                                                     },
@@ -18844,7 +18955,10 @@
                                                                 },
                                                                 {
                                                                   "name": "Scrafty",
-                                                                  "image": "Scrafty.png",
+                                                                  "images": [
+                                                                  "Scrafty.png",
+                                                                  "Mega Scrafty.png"
+                                                                  ],
                                                                   "description": "El Pokémon gamberro.",
                                                                   "imgWidth": 150,
                                                                   "imgHeight": 150,
@@ -18912,7 +19026,7 @@
                                                                     },
                                                                     {
                                                                       "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                      "description": "Mientras da patadas, se protege de los ataques con la muda de su piel. Entre más grande es su cresta, más se respeta."
+                                                                      "description": "Scrafty: Mientras da patadas, se protege de los ataques con la muda de su piel. Entre más grande es su cresta, más se respeta.\n\nMega-Scrafty: La megaevolución le dio a su piel un aspecto blancuzco y un tacto duro y elástico. Además, tiene el mismo espíritu de lucha de siempre."
                                                                     }
                                                                   ]
                                                                 },
@@ -19167,7 +19281,7 @@
                                                                     },
                                                                     {
                                                                       "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                      "description": "Sus potentes alas le permiten volar a una altura de 1,400 m. Escupe llamaradas que alcanzan temperaturas muy elevadas."
+                                                                      "description": "Charizard: Sus potentes alas le permiten volar a una altura de 1,400 m. Escupe llamaradas que alcanzan temperaturas muy elevadas.\n\nMega-Charizard X: La extraordinaria energía que fluye por su cuerpo le oscureció la piel y provocó la aparición de intensas llamas azules.\n\nMega-Charizard Y: El vínculo que lo une a su Entrenador es la fuente de su poder. Su capacidad de vuelo supera la de un avión de combate."
                                                                     }
                                                                   ]
                                                                 }
@@ -19497,7 +19611,7 @@
                                                                         },
                                                                         {
                                                                           "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                          "description": "Para vencer a su enemigo, lo aplasta con el peso de su cuerpo. En momentos de apuro, se esconde en el caparazón."
+                                                                          "description": "Blastoise: Para vencer a su enemigo, lo aplasta con el peso de su cuerpo. En momentos de apuro, se esconde en el caparazón.\n\nMega-Blastoise: Sus fornidas patas y lomo le permiten aguantar el retroceso del cañón de su caparazón, cuya potencia es tan poderosa como la de un tanque."
                                                                         }
                                                                       ]
                                                                     },
@@ -20251,7 +20365,7 @@
                                                                                         },
                                                                                         {
                                                                                           "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                          "description": "Marca una montaña entera como su territorio. Entre más cicatrices tiene, más diestro es en combate, por lo que se recomienda tener cuidado."
+                                                                                          "description": "Aggron: Marca una montaña entera como su territorio. Entre más cicatrices tiene, más diestro es en combate, por lo que se recomienda tener cuidado. Mega-Aggron: La energía de la megaevolución hace que todo el hierro de su cuerpo se transforme en una coraza integral de acero."
                                                                                         }
                                                                                       ]
                                                                                     },
@@ -20757,7 +20871,10 @@
                                                                                                                             },
                                                                                                                             {
                                                                                                                               "name": "Staraptor",
-                                                                                                                              "image": "Staraptor.png",
+                                                                                                                              "images": [
+                                                                                                                                    "Staraptor.png",
+                                                                                                                                    "Mega Staraptor.png"
+                                                                                                                                  ],
                                                                                                                               "description": "El Pokémon depredador.",
                                                                                                                               "imgWidth": 150,
                                                                                                                               "imgHeight": 150,
@@ -20838,6 +20955,10 @@
                                                                                                                                 {
                                                                                                                                   "icon": "Pokémon Púrpura Icono.jpg",
                                                                                                                                   "description": "Jamás deja de atacar, aunque lo hayan herido. Le preocupa mucho la forma de su cresta."
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                                                  "description": "Staraptor: Tiene los músculos de las alas y las patas muy desarrollados. Puede llevarse volando Pokémon pequeños con suma facilidad.\n\nMega-Staraptor: Su habilidad para volar es tan excepcional que es capaz de desplazarse sin esfuerzo llevando en sus garras un Steelix de más de 400 kg."
                                                                                                                                 }
                                                                                                                               ]
                                                                                                                             },
@@ -20971,6 +21092,10 @@
                                                                                                                                     {
                                                                                                                                       "icon": "Pokémon Púrpura Icono.jpg",
                                                                                                                                       "description": "Parte de sus alas se ha convertido en acero, pero es capaz de surcar los cielos con facilidad a pesar de su peso."
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                      "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                                                      "description": "La dureza de sus alas convertidas en acero es tal que le permite surcar los cielos con brío sin inmutarse ante los ataques que recibe."
                                                                                                                                     }
                                                                                                                                   ]
                                                                                                                                 },
@@ -21111,6 +21236,10 @@
                                                                                                                                 {
                                                                                                                                   "icon": "Pokémon Púrpura Icono.jpg",
                                                                                                                                   "description": "Plumaje verde: Los Squawkabilly de plumas verdes son los predominantes. Arman mucho ruido al buscar comida por las mañanas y las noches.\n\nPlumaje azul: Los ejemplares de plumaje azulado sienten rivalidad por los de plumas verdes, pues sus grupos son mayores y, por tanto, más fuertes.\n\nPlumaje amarillo: Los de color amarillo son especialmente agresivos. En más de una ocasión han echado a otros grupos de Pokémon pájaro de las ciudades.\n\nPlumaje blanco: Aunque los de este color sean la minoría, viven sin problemas en la civilización porque su color les permite camuflarse bien entre los edificios."
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                                                  "description": "Plumaje verde: Forman bandadas según el color de su plumaje. Un gen dominante hace que los ejemplares de plumas verdes sean los más numerosos.\n\nPlumaje azul: Constituyen el segundo grupo más numeroso tras los ejemplares de plumaje verde, a los que consideran rivales.\n\nPlumaje amarillo: La agresividad de los ejemplares de plumaje amarillo responde a su negativa a ser sometidos por otros grupos más numerosos.\n\nPlumaje blanco: Aunque los ejemplares de este color sean la minoría y no les guste combatir, cuando corren peligro demuestran ser valientes y audaces."
                                                                                                                                 }
                                                                                                                               ]
                                                                                                                             },
@@ -21305,7 +21434,7 @@
                                                                                                                                 },
                                                                                                                                 {
                                                                                                                                   "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                                                                  "description": "Vuela tranquilamente por los cielos. Su melódico trino cautiva a todo aquel que lo escucha."
+                                                                                                                                  "description": "Altaria: Vuela tranquilamente por los cielos. Su melódico trino cautiva a todo aquel que lo escucha.\n\nMega-Altaria: Aunque sus plumas son increíblemente suaves, son tan resistentes que solo unas pocas bastarían para mantener un camión suspendido en el aire."
                                                                                                                                 }
                                                                                                                               ]
                                                                                                                             }
@@ -22008,7 +22137,7 @@
                                                                                                                                     },
                                                                                                                                     {
                                                                                                                                       "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                                                                      "description": "Controla su posición en el aire con las alas. Lanza ataques desde gran altura que son difíciles de evitar."
+                                                                                                                                      "description": "Hawlucha: Controla su posición en el aire con las alas. Lanza ataques desde gran altura que son difíciles de evitar.\n\nMega-Hawlucha: Presume su fuerza al exhibir todos los músculos de su cuerpo, los cuales se ultradesarrollaron por la megaevolución."
                                                                                                                                     }
                                                                                                                                   ]
                                                                                                                                 },
@@ -22512,7 +22641,7 @@
                                                                                                                                     },
                                                                                                                                     {
                                                                                                                                       "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                                                                      "description": "Anida en las zarzas, por lo que las plumas de sus crías crecen fortalecidas por los rasguños de las espinas."
+                                                                                                                                      "description": "Skarmory: Anida en las zarzas, por lo que las plumas de sus crías crecen fortalecidas por los rasguños de las espinas.\n\nMega-Skarmory: Vuela a velocidad supersónica. Las ondas de choque que provoca mandan a volar a su rival, al que remata con las garras."
                                                                                                                                     }
                                                                                                                                   ]
                                                                                                                                 }
@@ -23374,7 +23503,7 @@
                                                                                                                     },
                                                                                                                     {
                                                                                                                       "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                                                      "description": "Cuando caza, planea a ras del agua y atrapa con sus garras a presas como los Magikarp."
+                                                                                                                      "description": "Pidgeot: Cuando caza, planea a ras del agua y atrapa con sus garras a presas como los Magikarp.\n\nMega-Pidgeot: Su potencia muscular aumentó tanto que es capaz de mantener el vuelo sin descanso durante dos semanas."
                                                                                                                     }
                                                                                                                   ]
                                                                                                                 },
@@ -23574,6 +23703,10 @@
                                                                                                                     {
                                                                                                                       "icon": "Pokémon Púrpura Icono.jpg",
                                                                                                                       "description": "Este Pokémon presenta una conducta sincrónica que permite a la colonia entera atacar simultáneamente como una única entidad."
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                      "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                                      "description": "Las colonias más nutridas llegan a superar los 10,000 ejemplares, que se mueven al unísono en una espectacular exhibición de sincronía."
                                                                                                                     }
                                                                                                                   ]
                                                                                                                 }
@@ -23703,6 +23836,10 @@
                                                                                                                         {
                                                                                                                           "icon": "Pokémon Púrpura Icono.jpg",
                                                                                                                           "description": "Puede saltar edificios de 30 plantas. Reduce a cenizas a sus rivales con sus puñetazos de fuego."
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                                          "description": "Blaziken: Puede saltar edificios de 30 pisos. Reduce a cenizas a sus rivales con sus puñetazos de fuego.\n\nMega-Blaziken: La sangre en ebullición que le recorre todo el cuerpo duplica la destreza de sus movimientos. Somete a sus rivales en un abrir y cerrar de ojos."
                                                                                                                         }
                                                                                                                       ]
                                                                                                                     },
@@ -23806,6 +23943,10 @@
                                                                                                                             {
                                                                                                                               "icon": "Pokémon_Perla_Reluciente Icono.png",
                                                                                                                               "description": "Un Pokémon muy inteligente, capaz de adelantar a aviones a reacción plegando las patas delanteras."
+                                                                                                                            },
+                                                                                                                            {
+                                                                                                                              "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                                              "description": "Latios: Es muy inteligente y entiende el lenguaje humano. Es un Pokémon muy pacífico y le desagrada combatir.\n\nMega-Latios: Su velocidad de vuelo supera los 4 mach. Es de los Pokémon más hábiles en los combates aéreos."
                                                                                                                             }
                                                                                                                           ]
                                                                                                                         },
@@ -23903,6 +24044,10 @@
                                                                                                                             {
                                                                                                                               "icon": "Pokémon_Perla_Reluciente Icono.png",
                                                                                                                               "description": "Su cuerpo está cubierto de un plumón que refracta la luz y le permite volverse invisible."
+                                                                                                                            },
+                                                                                                                            {
+                                                                                                                              "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                                              "description": "Latias: Se comunica por telepatía. Puede recubrirse el cuerpo con un plumaje que refracta la luz y que le permite volverse invisible.\n\nMega-Latias: Su habilidad para volar y su potencia de ataque se incrementaron. Confunde a sus rivales desperdigando plumas transparentes."
                                                                                                                             }
                                                                                                                           ]
                                                                                                                         }
@@ -25024,6 +25169,10 @@
                                                                                                                         {
                                                                                                                           "icon": "Pokémon_Perla_Reluciente Icono.png",
                                                                                                                           "description": "No puede vivir sin el puerro que lleva, así que lo protege de sus atacantes con todas sus fuerzas."
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                                          "description": "El puerro que lleva es su mejor arma. Suele usarlo como espada para cortar cosas."
                                                                                                                         }
                                                                                                                       ]
                                                                                                                     },
@@ -25046,6 +25195,10 @@
                                                                                                                         {
                                                                                                                           "icon": "Pokémon_Escudo_Icono.png",
                                                                                                                           "description": "Repele ataques con las hojas de su duro puerro y contraataca con su tallo afilado. El puerro que le sirve de armamento sigue siendo comestible."
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                                          "description": "Su puerro, a cuyo cuidado dedica cuerpo y alma, es su razón de ser. Lo blande con maestría en combate para cosechar grandes hazañas."
                                                                                                                         }
                                                                                                                       ]
                                                                                                                     }
@@ -25344,7 +25497,10 @@
                                                                                     },
                                                                                     {
                                                                                       "name": "Baxcalibur",
-                                                                                      "image": "Baxcalibur.png",
+                                                                                      "images": [
+                                                                                        "Baxcalibur.png",
+                                                                                        "Mega Baxcalibur.png"
+                                                                                      ],
                                                                                       "description": "El Pokémon dragón hielo.",
                                                                                       "imgWidth": 150,
                                                                                       "imgHeight": 150,
@@ -25361,6 +25517,10 @@
                                                                                         {
                                                                                           "icon": "Pokémon Púrpura Icono.jpg",
                                                                                           "description": "Se coloca boca abajo y se propulsa con su aliento gélido para cargar contra sus rivales, a los que remata con la hoja de su placa dorsal."
+                                                                                        },
+                                                                                        {
+                                                                                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                          "description": "Baxcalibur: Exhala un aliento gélido capaz de solidificar hasta el magma. Con él congela a sus rivales para luego pulverizarlos de un coletazo.\n\nMega-Baxcalibur: Tras la megaevolución, la cuchilla de su placa dorsal adquiere un tamaño descomunal. Dispara rayos por la empuñadura del plexo solar."
                                                                                         }
                                                                                       ]
                                                                                     }
@@ -25602,7 +25762,7 @@
                                                                                     },
                                                                                     {
                                                                                       "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                      "description": "El aroma que desprenden sus pétalos contiene una sustancia que calma el instinto agresivo."
+                                                                                      "description": "Meganium: El aroma que desprenden sus pétalos contiene una sustancia que calma el instinto agresivo.\n\nMega-Meganium: El poder del Rayo Solar que proyecta por sus cuatro flores es descomunal, por lo que también recibe el nombre de Megacañón Solar."
                                                                                     }
                                                                                   ]
                                                                                 },
@@ -25793,7 +25953,7 @@
                                                                             },
                                                                             {
                                                                               "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                              "description": "Cuando se enfada, derriba montañas y entierra ríos. Esto altera el paisaje y es necesario volver a dibujar los mapas."
+                                                                              "description": "Tyranitar: Cuando se enfada, derriba montañas y entierra ríos. Esto altera el paisaje y es necesario volver a dibujar los mapas.\n\nMega-Tyranitar: La megaevolución lo vuelve aún más violento que de costumbre. Se desconoce si oye las órdenes de su Entrenador."
                                                                             }
                                                                           ]
                                                                         }
@@ -25944,7 +26104,7 @@
                                                                         },
                                                                         {
                                                                           "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                          "description": "Fue regenerado a partir del material genético de una criatura antigua encontrada en ámbar. Cuando vuela, emite escandalosos alaridos."
+                                                                          "description": "Aerodactyl: Fue regenerado a partir del material genético de una criatura antigua encontrada en ámbar. Cuando vuela, emite escandalosos alaridos.\n\nMega-Aerodactyl: Parte de su cuerpo quedó petrificada. Algunos estudiosos afirman que esta es la verdadera forma de Aerodactyl."
                                                                         }
                                                                       ]
                                                                     }
@@ -26074,7 +26234,7 @@
                                                                         },
                                                                         {
                                                                           "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                          "description": "Suele moverse lentamente, pero alcanza velocidades vertiginosas al atacar y morder a su presa."
+                                                                          "description": "Feraligatr: Suele moverse lentamente, pero alcanza velocidades vertiginosas al atacar y morder a su presa.\n\nMega-Feraligatr: Al unir ambos brazos y la aleta que le cuelga al lomo cual capucha, crea una colosal mandíbula que multiplica por diez su potencia de mordida."
                                                                         }
                                                                       ]
                                                                     },
@@ -26538,7 +26698,7 @@
                                                                 },
                                                                 {
                                                                   "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                  "description": "Lleva a su cría en el marsupio. Solo deja que salga a jugar cuando no advierte peligro."
+                                                                  "description": "Kangaskhan: Lleva a su cría en el marsupio. Solo deja que salga a jugar cuando no advierte peligro.\n\nMega-Kangaskhan: La energía de la megaevolución hace crecer de golpe a la cría, que coordina a la perfección sus movimientos con los de su madre."
                                                                 }
                                                               ]
                                                             },
@@ -26687,6 +26847,10 @@
                                                                     {
                                                                       "icon": "Pokémon_Perla_Reluciente Icono.png",
                                                                       "description": "Este Pokémon de carácter salvaje porta desde que nace un hueso que utiliza con maestría."
+                                                                    },
+                                                                    {
+                                                                      "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                      "description": "Lleva un hueso que consiguió en un lugar desconocido. Se dice que existe un cementerio de Marowak en algún lugar."
                                                                     }
                                                                   ]
                                                                 },
@@ -26725,6 +26889,10 @@
                                                                     {
                                                                       "icon": "Pokémon_Escudo_Icono.png",
                                                                       "description": "Se dice que las llamas malditas del hueso que porta pueden herir de forma incurable el cuerpo y el alma de quien entre en contacto con ellas."
+                                                                    },
+                                                                    {
+                                                                      "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                      "description": "Convierte el alma de su difunta madre en llamas. Para honrar y llorar a sus compañeros caídos, baila sin descanso toda la noche."
                                                                     }
                                                                   ]
                                                                 }
@@ -27264,7 +27432,7 @@
                                                                             },
                                                                             {
                                                                               "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                              "description": "Construye madrigueras laberínticas a 100 m bajo tierra. A veces abre agujeros en los túneles del metro."
+                                                                              "description": "Excadrill: Construye madrigueras laberínticas a 100 m bajo tierra. A veces abre agujeros en los túneles del metro.\n\nMega-Excadrill: Al juntar las garras y la cabeza, adopta una forma aerodinámica que le permite girar a gran velocidad y destruir todo a su paso."
                                                                             }
                                                                           ]
                                                                         },
@@ -27640,7 +27808,7 @@
                                                                             },
                                                                             {
                                                                               "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                              "description": "Tiene tanta fuerza que puede volcar un tanque de 50 toneladas de un empujón. Usa su cuerpo como escudo para proteger a sus aliados."
+                                                                              "description": "Chesnaught: Tiene tanta fuerza que puede volcar un tanque de 50 toneladas de un empujón. Usa su cuerpo como escudo para proteger a sus aliados.\n\nMega-Chesnaught: La convicción que lo impulsa a proteger a los demás a toda costa es tan inquebrantable como su coraza reforzada."
                                                                             }
                                                                           ]
                                                                         }
@@ -27846,6 +28014,10 @@
                                                                             {
                                                                               "icon": "Leyendas_Pokémon_Arceus Icono.png",
                                                                               "description": "Sus patas traseras se transformaron en alas. Usa las cuatro alas con tal destreza que puede volar por los túneles más angostos de las cuevas sin disminuir la velocidad."
+                                                                            },
+                                                                            {
+                                                                              "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                              "description": "Sus colmillos son tan afilados que su mordedura resulta indolora y puede succionarle la sangre a sus presas en la oscuridad sin que se percaten."
                                                                             }
                                                                           ]
                                                                         },
@@ -28204,7 +28376,7 @@
                                                                                                 },
                                                                                                 {
                                                                                                   "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                                  "description": "El macho con la melena de fuego más grande de toda la manada es el líder de sus compañeros."
+                                                                                                  "description": "Pyroar: El macho con la melena de fuego más grande de toda la manada es el líder de sus compañeros.\n\nMega-Pyroar: Las llamas que escupe superan los 10,000 ºC. Protege a la manada agitando su abrasadora melena de fuego."
                                                                                                 }
                                                                                               ]
                                                                                             },
@@ -28262,7 +28434,10 @@
                                                                                                 },
                                                                                                 {
                                                                                                   "name": "Zeraora",
-                                                                                                  "image": "Zeraora.png",
+                                                                                                  "images": [
+                                                                                                  "Zeraora.png",
+                                                                                                  "Mega Zeraora.png"
+                                                                                                  ],
                                                                                                   "description": "El Pokémon fulgor.",
                                                                                                   "imgWidth": 150,
                                                                                                   "imgHeight": 150,
@@ -28287,6 +28462,10 @@
                                                                                                     {
                                                                                                       "icon": "Pokémon_Escudo_Icono.png",
                                                                                                       "description": "Las almohadillas de sus patas desprenden descargas eléctricas. Cuando corre, hace que caigan rayos y reverberen los truenos."
+                                                                                                    },
+                                                                                                    {
+                                                                                                      "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                      "description": "Zeraora: Las almohadillas de sus patas desprenden descargas eléctricas. Cuando corre, hace que los rayos caigan y que los truenos resuenen.\n\nMega-Zeraora: Almacena en su cuerpo la energía eléctrica de diez rayos. Cuando desata su poder, se vuelve uno de los Pokémon de tipo Eléctrico más fuertes."
                                                                                                     }
                                                                                                   ]
                                                                                                 }
@@ -28343,6 +28522,10 @@
                                                                                                 {
                                                                                                   "icon": "Pokémon_Escudo_Icono.png",
                                                                                                   "description": "Libra disputas territoriales con los Thievul. Se acerca a sus rivales por la espalda sin hacer el menor ruido."
+                                                                                                },
+                                                                                                {
+                                                                                                  "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                  "description": "Va y viene a voluntad. Su elegante estilo y hermoso pelaje cautivan a muchos Entrenadores."
                                                                                                 }
                                                                                               ]
                                                                                             }
@@ -28496,6 +28679,10 @@
                                                                                                         {
                                                                                                           "icon": "Pokémon_Escudo_Icono.png",
                                                                                                           "description": "Posee una gran fortaleza física y emplea tácticas rastreras en combate, lo que lo convierte en un rival duro de roer."
+                                                                                                        },
+                                                                                                        {
+                                                                                                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                          "description": "La redondez de su cara es símbolo de fortuna. Se les considera más hermosos entre más grande y rechoncho sea su rostro."
                                                                                                         }
                                                                                                       ]
                                                                                                     },
@@ -28646,6 +28833,10 @@
                                                                                                         {
                                                                                                           "icon": "Pokémon Púrpura Icono.jpg",
                                                                                                           "description": "Tiene un carácter muy fuerte. Cuando estira la cola, conviene tener cuidado, pues podría indicar que está a punto de abalanzarse y morder."
+                                                                                                        },
+                                                                                                        {
+                                                                                                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                          "description": "Muy valorado por su aire sofisticado. Sin embargo, ataca y araña a la más mínima provocación."
                                                                                                         }
                                                                                                       ]
                                                                                                     },
@@ -28668,6 +28859,10 @@
                                                                                                         {
                                                                                                           "icon": "Pokémon_Escudo_Icono.png",
                                                                                                           "description": "Su devoción por la lucha ha propiciado que evolucionara y le ha conferido unas peligrosas garras que se convierten en dagas al extenderse."
+                                                                                                        },
+                                                                                                        {
+                                                                                                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                          "description": "Su inigualable fuerza en combate lo convirtió en protagonista de innumerables sagas heroicas, pero en su madriguera no hay más que basura."
                                                                                                         }
                                                                                                       ]
                                                                                                     }
@@ -29314,6 +29509,10 @@
                                                                                                 {
                                                                                                   "icon": "Pokémon Púrpura Icono.jpg",
                                                                                                   "description": "Cuando se encuentra con un Seviper, se le eriza el pelaje y se pone en guardia. Sus zarpas son su mejor arma."
+                                                                                                },
+                                                                                                {
+                                                                                                  "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                  "description": "Se le eriza todo el pelaje con solo oler un Seviper. Con sus afiladas garras puede despedazar a sus enemigos."
                                                                                                 }
                                                                                               ]
                                                                                             }
@@ -29325,7 +29524,8 @@
                                                                                       "name": "Absol",
                                                                                       "images": [
                                                                                         "Absol.png",
-                                                                                        "Mega Absol.png"
+                                                                                        "Mega Absol.png",
+                                                                                        "Mega Absol Z.png"
                                                                                       ],
                                                                                       "description": "El Pokémon catástrofe.",
                                                                                       "imgWidth": 150,
@@ -29442,7 +29642,7 @@
                                                                                         },
                                                                                         {
                                                                                           "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                          "description": "Presiente cuando se aproxima un desastre y se dice que solo se aparece ante la gente para advertir de peligros inminentes."
+                                                                                          "description": "Absol: Presiente cuando se aproxima un desastre y se dice que solo se aparece ante la gente para advertir de peligros inminentes.\n\nMega-Absol: El pelaje erizado de su dorso se asemeja a un par de alas que, al agitarse, emiten una potente aura que intimida al rival.\n\nMega-Absol Z: Despedaza a los enemigos con el pelaje del dorso, tan puntiagudo como una garra. Tiene la gentileza de hacerlo de un solo golpe para que no sufran."
                                                                                         }
                                                                                       ]
                                                                                     }
@@ -31393,7 +31593,7 @@
                                                                                                     },
                                                                                                     {
                                                                                                       "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                                      "description": "Sus neuronas se multiplican continuamente durante su vida. Es por eso que siempre lo recuerda todo."
+                                                                                                      "description": "Alakazam: Sus neuronas se multiplican continuamente durante su vida. Es por eso que siempre lo recuerda todo.\n\n Mega-Alakazam: Sacrifica su musculatura a cambio de liberar su verdadero poder. Gracias a sus habilidades psíquicas, no hay nada que se le escape."
                                                                                                     }
                                                                                                   ]
                                                                                                 }
@@ -31418,6 +31618,10 @@
                                                                                                 {
                                                                                                   "icon": "Pokémon_Escudo_Icono.png",
                                                                                                   "description": "Un Pokémon ágil y de afiladas garras que se alimenta de huevos y comida robados. Los Boltund son su enemigo natural."
+                                                                                                },
+                                                                                                {
+                                                                                                  "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                  "description": "Marca su presa con olor para seguirle el rastro con sagacidad hasta dar con su madriguera."
                                                                                                 }
                                                                                               ]
                                                                                             },
@@ -31462,7 +31666,7 @@
                                                                                                 },
                                                                                                 {
                                                                                                   "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                                  "description": "Sus poderes psíquicos le permiten controlar vórtices de fuego a 3,000 ºC que envuelven y calcinan a sus enemigos."
+                                                                                                  "description": "Delphox: Sus poderes psíquicos le permiten controlar vórtices de fuego a 3,000 ºC que envuelven y calcinan a sus enemigos.\n\nMega-Delphox: Controla unas ramas llameantes para hechizar a su oponente y luego lo calcina con una bola de fuego descomunal."
                                                                                                 }
                                                                                               ]
                                                                                             }
@@ -31512,6 +31716,10 @@
                                                                                                             {
                                                                                                               "icon": "Pokémon Púrpura Icono.jpg",
                                                                                                               "description": "La reencarnación de un Pokémon muy querido y llorado. Odia que le toquen la protuberancia de la cabeza."
+                                                                                                            },
+                                                                                                            {
+                                                                                                              "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                              "description": "Luego de pasar muchos años custodiando la tumba de su amo fallecido, reencarnó en un Pokémon fantasma."
                                                                                                             }
                                                                                                           ]
                                                                                                         },
@@ -31534,6 +31742,10 @@
                                                                                                             {
                                                                                                               "icon": "Pokémon Púrpura Icono.jpg",
                                                                                                               "description": "Le encanta jugar con los niños. Normalmente es afable, pero, cuando ha de proteger a su familia, adopta un aspecto amenazante."
+                                                                                                            },
+                                                                                                            {
+                                                                                                              "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                              "description": "Posee un carácter manso a pesar de su aspecto, pero, si alguien amenaza a su familia, lo persigue sin piedad hasta eliminar el peligro."
                                                                                                             }
                                                                                                           ]
                                                                                                         },
@@ -31556,6 +31768,10 @@
                                                                                                             {
                                                                                                               "icon": "Pokémon Púrpura Icono.jpg",
                                                                                                               "description": "La superficie de su piel se endurece cuando se expone a un calor intenso. Su cuerpo desprende un fragante aroma."
+                                                                                                            },
+                                                                                                            {
+                                                                                                              "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                              "description": "El fragante aroma que despide su cuerpo estimula con fuerza el apetito de los rivales, minando así su energía física y mental."
                                                                                                             }
                                                                                                           ]
                                                                                                         },
@@ -31684,7 +31900,7 @@
                                                                                                             },
                                                                                                             {
                                                                                                               "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                                              "description": "Las llamas que respira cuando se enfada contienen toxinas. Si causan una quemadura, dolerá para siempre."
+                                                                                                              "description": "Houndoom: Las llamas que respira cuando se enfada contienen toxinas. Si causan una quemadura, dolerá para siempre.\n\nMega-Houndoom: La energía de la megaevolución hace que su cuerpo desprenda un calor abrasador. Reduce a cenizas al oponente con su aliento de fuego."
                                                                                                             }
                                                                                                           ]
                                                                                                         },
@@ -32259,7 +32475,8 @@
                                                                                                   "name": "Lucario",
                                                                                                   "images": [
                                                                                                     "Lucario.png",
-                                                                                                    "Mega Lucario.png"
+                                                                                                    "Mega Lucario.png",
+                                                                                                    "Mega Lucario Z.png"
                                                                                                   ],
                                                                                                   "description": "El Pokémon aura.",
                                                                                                   "imgWidth": 150,
@@ -32368,7 +32585,7 @@
                                                                                                     },
                                                                                                     {
                                                                                                       "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                                      "description": "Puede percibir el aura de aquello que lo rodea. Es capaz de percibir las emociones de otros incluso a 1 km de distancia."
+                                                                                                      "description": "Lucario: Puede percibir el aura de aquello que lo rodea. Es capaz de percibir las emociones de otros incluso a 1 km de distancia.\n\nMega-Lucario: La energía de la megaevolución se funde con su aura y recorre su cuerpo, lo que le deja unas profundas marcas negras en la piel.\n\nMega-Lucario Z: El aura con la que envuelve todo su cuerpo le permite esquivar cualquier ataque mientras combate como si estuviera ejecutando una danza."
                                                                                                     }
                                                                                                   ]
                                                                                                 }
@@ -32487,7 +32704,7 @@
                                                                                                 },
                                                                                                 {
                                                                                                   "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                                  "description": "Descarga electricidad desde su melena. Para atacar, crea nubarrones sobre su cabeza desde los que lanza rayos."
+                                                                                                  "description": "Manectric: Descarga electricidad desde su melena. Para atacar, crea nubarrones sobre su cabeza desde los que lanza rayos.\n\nMega-Manectric: La megaevolución hace que se acumule en su interior más electricidad de la que es capaz de utilizar."
                                                                                                 }
                                                                                               ]
                                                                                             }
@@ -32923,6 +33140,10 @@
                                                                                                 {
                                                                                                   "icon": "Pokémon_Escudo_Icono.png",
                                                                                                   "description": "Forma habitual: A base de superar encarnizados combates, su cuerno se fortalece y, entonces, despierta su verdadero poder.\n\nForma brío: Su poder latente se ha concentrado en el cuerno de la frente y lo ha convertido en una espada que todo lo corta."
+                                                                                                },
+                                                                                                {
+                                                                                                  "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                  "description": "Forma habitual: Expulsa agua por las pezuñas para poder deslizarse. Es especialista en atacar usando las patas.\n\nForma brío: Su magnífico cuerno es símbolo de su resolución. Los sentimientos de sus mentores se han manifestado en forma de tres plumas coloridas."
                                                                                                 }
                                                                                               ]
                                                                                             },
@@ -33297,6 +33518,10 @@
                                                                                             {
                                                                                               "icon": "Pokémon_Escudo_Icono.png",
                                                                                               "description": "Siempre está soñando o adormecido. Se pone de muy mal humor al despertar, por lo que es mejor no perturbarlo."
+                                                                                            },
+                                                                                            {
+                                                                                              "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                              "description": "Con el humo que despide por la frente, puede recrear la forma de las cosas que ve en los sueños que engulle."
                                                                                             }
                                                                                           ]
                                                                                         }
@@ -33938,7 +34163,7 @@
                                                                                                             },
                                                                                                             {
                                                                                                               "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                                              "description": "La punta de su cola reluce brillantemente y se puede ver desde lejos, por lo que la usa como un faro para guiar a quienes se perdieron."
+                                                                                                              "description": "Ampharos: La punta de su cola reluce brillantemente y se puede ver desde lejos, por lo que la usa como un faro para guiar a quienes se perdieron.\n\nMega-Ampharos: La descomunal energía de la megaevolución lo afecta a nivel celular, lo que hace resurgir la sangre de dragón que late en su interior."
                                                                                                             }
                                                                                                           ]
                                                                                                         }
@@ -34045,6 +34270,10 @@
                                                                                                         {
                                                                                                           "icon": "Pokémon_Escudo_Icono.png",
                                                                                                           "description": "Confunde a los enemigos con sus movimientos relampagueantes y luego los rebana sin piedad con sus afilados cuernos."
+                                                                                                        },
+                                                                                                        {
+                                                                                                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                          "description": "Confunde a los enemigos con sus movimientos relampagueantes y luego los destaja sin piedad con sus afilados cuernos."
                                                                                                         }
                                                                                                       ]
                                                                                                     },
@@ -34099,6 +34328,10 @@
                                                                                                         {
                                                                                                           "icon": "Pokémon_Escudo_Icono.png",
                                                                                                           "description": "Un líder nato. Incluso los Pokémon más agresivos se muestran dóciles en su presencia."
+                                                                                                        },
+                                                                                                        {
+                                                                                                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                          "description": "Posee un cuerpo y un corazón de acero. Basta una mirada suya para que Pokémon violentos lo obedezcan."
                                                                                                         }
                                                                                                       ]
                                                                                                     },
@@ -34153,6 +34386,10 @@
                                                                                                         {
                                                                                                           "icon": "Pokémon_Escudo_Icono.png",
                                                                                                           "description": "Las leyendas de Teselia narran la lucha que libró contra los humanos para proteger a los Pokémon."
+                                                                                                        },
+                                                                                                        {
+                                                                                                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                          "description": "La potencia de su embestida puede derribar las murallas de un castillo. Las leyendas hablan de sus proezas."
                                                                                                         }
                                                                                                       ]
                                                                                                     }
@@ -34188,6 +34425,10 @@
                                                                                                     {
                                                                                                       "icon": "Pokémon Púrpura Icono.jpg",
                                                                                                       "description": "Macho: Siempre permanece junto a su Entrenador. Usa sus poderes psíquicos para predecir su conducta y atiende todas sus necesidades.\n\nHembra: Su búsqueda de emociones positivas, como la felicidad y la gratitud, lo empuja a desvivirse por cuidar de la gente y los Pokémon."
+                                                                                                    },
+                                                                                                    {
+                                                                                                      "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                      "description": "Macho: Con sus cuernos percibe las emociones de los seres vivos que se hallan cerca. Los sentimientos positivos constituyen su fuente de energía.\n\nHembra: Este Pokémon muestra una inteligencia superior. Se comunica e intercambia información con sus congéneres a través de los cuernos."
                                                                                                     }
                                                                                                   ]
                                                                                                 },
@@ -35440,6 +35681,10 @@
                                                                                                 {
                                                                                                   "icon": "Pokémon Púrpura Icono.jpg",
                                                                                                   "description": "Las perlas negras aumentan sus poderes psíquicos. Controla las mentes de sus rivales con un extraño baile."
+                                                                                                },
+                                                                                                {
+                                                                                                  "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                  "description": "Usa perlas negras para potenciar sus poderes psíquicos. Controla las mentes de sus rivales con un extraño baile."
                                                                                                 }
                                                                                               ]
                                                                                             },
@@ -35500,7 +35745,7 @@
                                                                                                 },
                                                                                                 {
                                                                                                   "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                                  "description": "Posee una tupida barba de fuego. Es rápido y poderoso. Su especialidad es la lucha cuerpo a cuerpo."
+                                                                                                  "description": "Emboar: Posee una tupida barba de fuego. Es rápido y poderoso. Su especialidad es la lucha cuerpo a cuerpo.\n\nMega-Emboar: Cuando sus compañeros se encuentran en problemas, blande una llama serpenteante en forma de lanza y acude a su rescate."
                                                                                                 }
                                                                                               ]
                                                                                             }
@@ -35841,7 +36086,7 @@
                                                                                     },
                                                                                     {
                                                                                       "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                      "description": "Los volcanes de su espalda entran en erupción cada diez años o cuando se enfada mucho."
+                                                                                      "description": "Camerupt: Los volcanes de su espalda entran en erupción cada diez años o cuando se enfada mucho.\n\nMega-Camerupt: Cuando su ira alcanza un punto crítico, el gran volcán que tiene en el lomo entra en erupción y expulsa lava violentamente."
                                                                                     }
                                                                                   ]
                                                                                 }
@@ -35941,6 +36186,10 @@
                                                                             {
                                                                               "icon": "Pokémon Púrpura Icono.jpg",
                                                                               "description": "Cada individuo pinta un patrón único y distintivo que irá replicando de forma constante a lo largo de toda su vida."
+                                                                            },
+                                                                            {
+                                                                              "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                              "description": "Marca su territorio pintando patrones en rocas y árboles con su saliva, cuyo color varía según su dieta."
                                                                             }
                                                                           ]
                                                                         }
@@ -36299,7 +36548,7 @@
                                                                                                         },
                                                                                                         {
                                                                                                           "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                                          "description": "Este muñeco se convirtió en un Pokémon debido al gran rencor que sintió cuando lo tiraron a la basura. Busca al niño que se deshizo de él.\n\nMega-Banette: La megaevolución alimentó su odio e hizo emerger por los cierres el poder maléfico que antes estaba contenido."
+                                                                                                          "description": "Banette: Este muñeco se convirtió en un Pokémon debido al gran rencor que sintió cuando lo tiraron a la basura. Busca al niño que se deshizo de él.\n\nMega-Banette: La megaevolución alimentó su odio e hizo emerger por los cierres el poder maléfico que antes estaba contenido."
                                                                                                         }
                                                                                                       ]
                                                                                                     },
@@ -36346,6 +36595,10 @@
                                                                                                         {
                                                                                                           "icon": "Pokémon Púrpura Icono.jpg",
                                                                                                           "description": "Dispara por los huecos que tiene en los brazos los huesos de aquellos cuya energía vital ha absorbido por completo."
+                                                                                                        },
+                                                                                                        {
+                                                                                                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                          "description": "Su castillo alberga abundantes huesos de los incautos a los que les absorbió su vitalidad por completo antes de quedar sepultados."
                                                                                                         }
                                                                                                       ]
                                                                                                     },
@@ -36390,6 +36643,10 @@
                                                                                                         {
                                                                                                           "icon": "Pokémon Púrpura Icono.jpg",
                                                                                                           "description": "Su cuerpo está compuesto de monedas unidas entre sí, por lo que es muy resistente. Abruma a sus enemigos disparándolas en ráfagas."
+                                                                                                        },
+                                                                                                        {
+                                                                                                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                          "description": "Su afición por los lugares bulliciosos hace que también se puedan encontrar ejemplares salvajes en las ciudades."
                                                                                                         }
                                                                                                       ]
                                                                                                     },
@@ -36530,7 +36787,7 @@
                                                                                                         },
                                                                                                         {
                                                                                                           "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                                          "description": "Al parecer, puede intuir si un humano tiene madera de rey. Según se dice, las personas que obtuvieron su reconocimiento acabaron siendo monarcas"
+                                                                                                          "description": "Forma escudo: Al parecer, puede intuir si un humano tiene potencial de liderazgo. Según se dice, las personas que obtuvieron su reconocimiento se convirtieron en reyes.\n    \nForma filo: Al adoptar esta forma, centra su estrategia en la ofensiva y aprovecha todo el peso y la fuerza del acero para destrozar al rival."
                                                                                                         }
                                                                                                       ]
                                                                                                     },
@@ -36748,6 +37005,10 @@
                                                                                                         {
                                                                                                           "icon": "Pokémon_Escudo_Icono.png",
                                                                                                           "description": "Aparece representado en los muros de antiguas sepulturas como símbolo de riqueza de reyes de antaño."
+                                                                                                        },
+                                                                                                        {
+                                                                                                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                          "description": "Atrapan en su interior a los ladrones de tumbas que los confunden con ataúdes de verdad."
                                                                                                         }
                                                                                                       ],
                                                                                                       "children": [
@@ -36770,6 +37031,10 @@
                                                                                                             {
                                                                                                               "icon": "Pokémon_Escudo_Icono.png",
                                                                                                               "description": "Su cuerpo, similar a una sombra, no debe tocarse bajo ningún concepto o se visualizarán los horribles recuerdos impregnados en la imagen."
+                                                                                                            },
+                                                                                                            {
+                                                                                                              "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                              "description": "Al reunirse de nuevo todos los fragmentos de la tabla de arcilla, se liberó todo el rencor acumulado en su interior."
                                                                                                             }
                                                                                                           ]
                                                                                                         }
@@ -36916,7 +37181,7 @@
                                                                                                             },
                                                                                                             {
                                                                                                               "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                                              "description": "Congela a sus enemigos con un aliento gélido a −50 ºC. La parte del cuerpo que parece su torso está hueca.\n\nMega-Froslass: Con su extraño aliento gélido, imbuido de energía fantasmal, puede congelar incluso elementos inmateriales como las llamas o el viento."
+                                                                                                              "description": "Froslass: Congela a sus enemigos con un aliento gélido a −50 ºC. La parte del cuerpo que parece su torso está hueca.\n\nMega-Froslass: Con su extraño aliento gélido, imbuido de energía fantasmal, puede congelar incluso elementos inmateriales como las llamas o el viento."
                                                                                                             }
                                                                                                           ]
                                                                                                         },
@@ -37053,7 +37318,7 @@
                                                                                                             },
                                                                                                             {
                                                                                                               "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                                              "description": "Para protegerse, este Pokémon se cubre con una armadura de hielo, la cual crea congelando la humedad del aire.\n\nMega-Glalie: Por su boca desencajada exhala una ventisca helada que cubre de blanco sus alrededores."
+                                                                                                              "description": "Glalie: Para protegerse, este Pokémon se cubre con una armadura de hielo, la cual crea congelando la humedad del aire.\n\nMega-Glalie: Por su boca desencajada exhala una ventisca helada que cubre de blanco sus alrededores."
                                                                                                             }
                                                                                                           ]
                                                                                                         }
@@ -37355,7 +37620,7 @@
                                                                                                         },
                                                                                                         {
                                                                                                           "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                                          "description": "Se esconde entre las sombras. Dicen que la temperatura baja 5 ºC en donde sea que aceche.\n\nMega-Gengar: Puede pasar de una dimensión a otra y aparecer donde quiera. Una vez causó gran revuelo al mostrar tan solo una pata a través de una pared."
+                                                                                                          "description": "Gengar:Se esconde entre las sombras. Dicen que la temperatura baja 5 ºC en donde sea que aceche.\n\nMega-Gengar: Puede pasar de una dimensión a otra y aparecer donde quiera. Una vez causó gran revuelo al mostrar tan solo una pata a través de una pared."
                                                                                                         }
                                                                                                       ]
                                                                                                     },
@@ -37394,6 +37659,10 @@
                                                                                                         {
                                                                                                           "icon": "Pokémon_Escudo_Icono.png",
                                                                                                           "description": "Posee la extraordinaria capacidad de infiltrarse en cualquier sombra, por lo que nadie lo había visto en mucho tiempo."
+                                                                                                        },
+                                                                                                        {
+                                                                                                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                          "description": "Se oculta en la sombra de su oponente y copia sus movimientos y su fuerza. Su imitación resulta más poderosa que el original."
                                                                                                         }
                                                                                                       ]
                                                                                                     },
@@ -37579,7 +37848,9 @@
                                                                                                   "name": "Magearna",
                                                                                                   "images": [
                                                                                                     "Magearna vetusta.png",
-                                                                                                    "Magearna.png"
+                                                                                                    "Magearna.png",
+                                                                                                    "Mega Magearna.png",
+                                                                                                    "Mega Magearna vetusto.png"
                                                                                                   ],
                                                                                                   "description": "El Pokémon artificial.",
                                                                                                   "imgWidth": 150,
@@ -37605,6 +37876,10 @@
                                                                                                     {
                                                                                                       "icon": "Pokémon Ultraluna Icono.png",
                                                                                                       "description": "Magearna color actual: Pokémon artificial creado por científicos hace unos 500 años. Su verdadera esencia es una pieza llamada Coránima.\n\nMagearna color vetusto: Un Pokémon infundido con un alma artificial. Sus refinados ornamentos son prueba de que fue un regalo para una familia real."
+                                                                                                    },
+                                                                                                    {
+                                                                                                      "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                      "description": "Magearna: Pokémon artificial creado por científicos hace unos 500 años. Su verdadera esencia es una pieza llamada Coránima.\n\nMagearna color vetusto: Forma que tenía Magearna en el momento de su creación. Sus magníficos ornamentos hicieron muy feliz a la hija de un rey.\n\nMega-Magearna: Al adoptar esta forma, se activa un modo supresor que anula sus sentimientos y le permite derrotar sin remisión a sus rivales.\n\nMega-Magearna (color vetusto): Con la Megapiedra como llave, se acciona un mecanismo implantado en secreto hace 500 años y cuya función es la de desactivar su limitador."
                                                                                                     }
                                                                                                   ]
                                                                                                 },
@@ -37738,7 +38013,7 @@
                                                                                                     },
                                                                                                     {
                                                                                                       "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                                      "description": "Un científico lo creó luego de años de horribles experimentos de ingeniería genética.\n\nMega-Mewtwo X: Su poder psíquico aumentó su masa muscular. Posee una fuerza de agarre de una tonelada y puede correr 100 m en dos segundos.\n\nMega-Mewtwo Y: Aunque su cuerpo se encogió, su extraordinario poder le permite reducir un rascacielos a escombros con tan solo pensarlo."
+                                                                                                      "description": "Mewtwo: Un científico lo creó luego de años de horribles experimentos de ingeniería genética.\n\nMega-Mewtwo X: Su poder psíquico aumentó su masa muscular. Posee una fuerza de agarre de una tonelada y puede correr 100 m en dos segundos.\n\nMega-Mewtwo Y: Aunque su cuerpo se encogió, su extraordinario poder le permite reducir un rascacielos a escombros con tan solo pensarlo."
                                                                                                     }
                                                                                                   ]
                                                                                                 },
@@ -37854,7 +38129,10 @@
                                                                                                 },
                                                                                                 {
                                                                                                   "name": "Golurk",
-                                                                                                  "image": "Golurk.png",
+                                                                                                  "images": [
+                                                                                                    "Golurk.png",
+                                                                                                    "Mega Golurk.png"
+                                                                                                  ],
                                                                                                   "description": "El Pokémon autómata.",
                                                                                                   "imgWidth": 150,
                                                                                                   "imgHeight": 150,
@@ -37919,6 +38197,10 @@
                                                                                                     {
                                                                                                       "icon": "Pokémon Púrpura Icono.jpg",
                                                                                                       "description": "Los Golurk fueron creados antaño para proteger a humanos y a Pokémon. Funcionan gracias a una extraña energía."
+                                                                                                    },
+                                                                                                    {
+                                                                                                      "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                      "description": "Golurk: Se dice que su cuerpo alberga una máquina de movimiento perpetuo que genera energía, pero no se constató la veracidad de tal afirmación.\n\nMega-Golurk: El poder de la megaevolución estimuló tanto la energía de su interior que no sería raro que explotara en cualquier momento."
                                                                                                     }
                                                                                                   ]
                                                                                                 },
@@ -38144,6 +38426,10 @@
                                                                                                     {
                                                                                                       "icon": "Pokémon Púrpura Icono.jpg",
                                                                                                       "description": "Se reprogramó su código para que también pudiera funcionar en otras dimensiones, pero no salió como se esperaba."
+                                                                                                    },
+                                                                                                    {
+                                                                                                      "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                      "description": "La actualización de software que recibió para viajar a otras dimensiones provocó cambios extraños y llamativos en su comportamiento."
                                                                                                     }
                                                                                                   ]
                                                                                                 },
@@ -38196,6 +38482,10 @@
                                                                                                     {
                                                                                                       "icon": "Pokémon_Zafiro_Alfa Icono.png",
                                                                                                       "description": "Un Pokémon de hace 300 millones de años y alterado por el Equipo Plasma, quienes le han equipado con un cañón en el lomo."
+                                                                                                    },
+                                                                                                    {
+                                                                                                      "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                      "description": "Genesect: Cierta organización devolvió a la vida a este Pokémon insecto del Paleozoico y modificó el gran cañón de su lomo.\n\nGenesect con hidroROM: Al equiparle un cartucho cargado de energía acuática, Genesect adquiere un aspecto con líneas aerodinámicas y la capacidad de volar.\n\nGenesect con fulgoROM: Al equiparle un cartucho cargado de energía eléctrica, Genesect adquiere este aspecto y la capacidad de disparar proyectiles de energía.\n\nGenesect con piroROM: Al equiparle un cartucho cargado de energía pírica, Genesect adquiere este aspecto, del que se destacan unas afiladas garras metálicas.\n\nGenesect con crioROM: Al equiparle un cartucho cargado de energía gélida, Genesect adopta este aspecto y su corazón pierde todo indicio de clemencia."
                                                                                                     }
                                                                                                   ]
                                                                                                 }
@@ -38350,6 +38640,10 @@
                                                                                                     {
                                                                                                       "icon": "Leyendas_Pokémon_Arceus Icono.png",
                                                                                                       "description": "Su aspecto recuerda al de un payaso, y su comportamiento al de un mimo. De la punta de sus dedos emana una energía con la que crea muros invisibles."
+                                                                                                    },
+                                                                                                    {
+                                                                                                      "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                      "description": "Crea muros invisibles solidificando el aire con un misterioso poder que le emana de los dedos."
                                                                                                     }
                                                                                                   ]
                                                                                                 },
@@ -38372,6 +38666,10 @@
                                                                                                     {
                                                                                                       "icon": "Pokémon_Escudo_Icono.png",
                                                                                                       "description": "Se ha granjeado la simpatía de todo el mundo por sus cómicos movimientos. Emite poderes psíquicos por el motivo de su barriga."
+                                                                                                    },
+                                                                                                    {
+                                                                                                      "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                      "description": "Se destaca por lo cómicos que resultan sus pasos de baile. Aprovecha mientras sus rivales se ríen para rociarlos con un aire gélido a −200 °C."
                                                                                                     }
                                                                                                   ]
                                                                                                 }
@@ -38410,7 +38708,7 @@
                                                                                                 },
                                                                                                 {
                                                                                                   "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                                  "description": "Este Pokémon consta de cinco subalternos y un líder, cuyas órdenes se obedecen ciegamente."
+                                                                                                  "description": "Falinks: Este Pokémon consta de cinco subalternos y un líder, cuyas órdenes se obedecen ciegamente.\n\nMega-Falinks: Tan solo una unidad con un vínculo muy fuerte es capaz de ejecutar esta formación suprema."
                                                                                                 }
                                                                                               ]
                                                                                             },
@@ -38712,6 +39010,10 @@
                                                                                                 {
                                                                                                   "icon": "Pokémon_Zafiro_Alfa Icono.png",
                                                                                                   "description": "Controla los sentimientos de los que escuchan las melodías que emite con su singular vocalización."
+                                                                                                },
+                                                                                                {
+                                                                                                  "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                  "description": "Forma lírica: Controla los sentimientos de quienes escuchan las melodías que emite con su singular vocalización.\n\nForma danza: Tras recordar la melodía que había olvidado por tanto tiempo, cautiva a todo el mundo con sus encantadores pasos de baile."
                                                                                                 }
                                                                                               ]
                                                                                             },
@@ -39433,7 +39735,7 @@
                                                                                                 },
                                                                                                 {
                                                                                                   "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                                  "description": "Gracias a su entrenamiento de yoga, desarrolló poderes psíquicos capaces de prever los movimientos de su rival."
+                                                                                                  "description": "Medicham: Gracias a su entrenamiento de yoga, desarrolló poderes psíquicos capaces de prever los movimientos de su rival.\n\nMega-Medicham: Le megaevolución le otorgó una fuerza espiritual ilimitada. Materializa con su mente unos brazos maléficos para derrotar a sus enemigos."
                                                                                                 }
                                                                                               ]
                                                                                             },
@@ -39811,7 +40113,7 @@
                                                                                                     },
                                                                                                     {
                                                                                                       "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                                      "description": "Lucha con las espadas que salen de sus codos. Es un maestro de la cortesía y la esgrima."
+                                                                                                      "description": "Gallade: Lucha con las espadas que salen de sus codos. Es un maestro de la cortesía y la esgrima.\n\nMega-Gallade: Obtiene fuerza del vínculo con su Entrenador. Ahora posee dos cuchillas para atacar a sus enemigos y una capa que lo protege."
                                                                                                     }
                                                                                                   ]
                                                                                                 },
@@ -39932,7 +40234,7 @@
                                                                                                     },
                                                                                                     {
                                                                                                       "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                                      "description": "Tiene la capacidad de predecir el futuro. Alcanza su máximo potencial cuando tiene que proteger a su Entrenador."
+                                                                                                      "description": "Gardevoir: Tiene la capacidad de predecir el futuro. Alcanza su máximo potencial cuando tiene que proteger a su Entrenador.\n\nMega-Gardevoir: Al desplegar las placas rojizas del pecho y abrir el corazón, es capaz de desatar toda la potencia de su poder psíquico."
                                                                                                     }
                                                                                                   ]
                                                                                                 }
@@ -40028,6 +40330,10 @@
                                                                                                     {
                                                                                                       "icon": "Pokémon_Escudo_Icono.png",
                                                                                                       "description": "Cuando un Sawk ha entrenado duro, es capaz de separar las aguas del océano con la potencia de sus técnicas de kárate."
+                                                                                                    },
+                                                                                                    {
+                                                                                                      "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                      "description": "La potencia de sus puñetazos aumenta si se aprieta el cinturón. Si lo molestan mientras entrena, se enoja."
                                                                                                     }
                                                                                                   ]
                                                                                                 },
@@ -40082,6 +40388,10 @@
                                                                                                     {
                                                                                                       "icon": "Pokémon_Escudo_Icono.png",
                                                                                                       "description": "Entrenan en grupos de cinco individuos. Si alguno es incapaz de seguir el ritmo, arroja el cinturón y abandona la cuadrilla."
+                                                                                                    },
+                                                                                                    {
+                                                                                                      "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                      "description": "Entrenan en grupos de cinco. Si alguno es incapaz de seguir el ritmo, arroja el cinturón y se marcha."
                                                                                                     }
                                                                                                   ]
                                                                                                 }
@@ -40249,6 +40559,10 @@
                                                                                                 {
                                                                                                   "icon": "Pokémon Púrpura Icono.jpg",
                                                                                                   "description": "Blande sin esfuerzo su pesado martillo de más de 100 kg. Cuando quiere algo, lo roba y se lo lleva de vuelta a su guarida."
+                                                                                                },
+                                                                                                {
+                                                                                                  "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                                  "description": "Este Pokémon lidera grupos de Tinkatink y les enseña las técnicas necesarias para forjar el metal."
                                                                                                 }
                                                                                               ]
                                                                                             },
@@ -40381,7 +40695,7 @@
                                                                                                 },
                                                                                                 {
                                                                                                   "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                                  "description": "Se oculta en cavernas oscuras. Debido a su dieta a base de gemas, sus ojos se transformaron en piedras preciosas."
+                                                                                                  "description": "Sableye: Se oculta en cavernas oscuras. Debido a su dieta a base de gemas, sus ojos se transformaron en piedras preciosas.\n\nMega-Sableye: Tras la megaevolución, la gema de su pecho crece de forma impresionante, hasta el punto de que puede repeler cualquier ataque."
                                                                                                 }
                                                                                               ]
                                                                                             },
@@ -40498,7 +40812,7 @@
                                                                                                 },
                                                                                                 {
                                                                                                   "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                                  "description": "Las enormes fauces de su cabeza se formaron a partir de sus antiguos cuernos. Puede triturar vigas de acero con ellas."
+                                                                                                  "description": "Mawile: Las enormes fauces de su cabeza se formaron a partir de sus antiguos cuernos. Puede triturar vigas de acero con ellas.\n\nMega-Mawile: Sus mandíbulas se agitan con violencia como si tuvieran voluntad propia. Pueden hacer pedazos una roca de un solo mordisco."
                                                                                                 }
                                                                                               ]
                                                                                             }
@@ -40894,6 +41208,10 @@
                                                                             {
                                                                               "icon": "Pokémon Púrpura Icono.jpg",
                                                                               "description": "Machaca sin piedad a sus rivales concentrando en los puños hasta el último ápice de ira albergada en su corazón."
+                                                                            },
+                                                                            {
+                                                                              "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                              "description": "Evolucionó tras usar repetidamente un movimiento con fuerza suficiente como para reventarle los vasos sanguíneos de la cabeza."
                                                                             }
                                                                           ]
                                                                         }
@@ -41014,7 +41332,7 @@
                                                                             },
                                                                             {
                                                                               "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                              "description": "Al tocar a alguien con las antenas de sus orejas, puede identificar su estado de ánimo y de salud por los latidos de su corazón."
+                                                                              "description": "Audino: Al tocar a alguien con las antenas de sus orejas, puede identificar su estado de ánimo y de salud por los latidos de su corazón.\n\nMega-Audino: Se debe evitar tocar las antenas secundarias que le crecen en la base del cuello, porque quien lo haga puede caer en un profundo sueño."
                                                                             }
                                                                           ]
                                                                         },
@@ -41115,7 +41433,7 @@
                                                                             },
                                                                             {
                                                                               "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                              "description": "Sus orejas son muy delicadas. Si alguien las toca con brusquedad, Lopunny lo golpeará con sus gráciles patas."
+                                                                              "description": "Lopunny: Sus orejas son muy delicadas. Si alguien las toca con brusquedad, Lopunny lo golpeará con sus gráciles patas.\n\nMega-Lopunny: Utiliza las orejas como látigo para azotar al enemigo. Posee un temperamento violento y combativo."
                                                                             }
                                                                           ]
                                                                         },
@@ -41674,6 +41992,10 @@
                                                                                 {
                                                                                   "icon": "Pokémon Púrpura Icono.jpg",
                                                                                   "description": "Forma saciada: Debido al pequeño tamaño de su estómago, si no come constantemente las semillas que guarda en los bolsillos, le entra hambre de inmediato.\n\nForma voraz: Cuando tiene hambre, sufre un desequilibrio hormonal que transforma la electricidad de sus carrillos en energía de tipo Siniestro."
+                                                                                },
+                                                                                {
+                                                                                  "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                                                                  "description": "Forma saciada: Siempre tiene hambre. Se nutre de las semillas que guarda en una especie de bolsillos para generar electricidad.\n\nForma voraz: El hambre lo volvió agresivo y convirtió la electricidad de sus mejillas en energía de tipo Siniestro."
                                                                                 }
                                                                               ]
                                                                             }
@@ -42744,7 +43066,10 @@
                     },
                     {
                       "name": "Glimmora",
-                      "image": "Glimmora.png",
+                      "images": [
+                        "Glimmora.png",
+                        "Mega Glimmora.png"
+                      ],
                       "description": "El Pokémon mineral.",
                       "imgWidth": 150,
                       "imgHeight": 150,
@@ -42761,6 +43086,10 @@
                         {
                           "icon": "Pokémon Púrpura Icono.jpg",
                           "description": "Sus pétalos están hechos de energía venenosa cristalizada. Recientemente se ha puesto de manifiesto su parecido con las joyas Teracristal."
+                        },
+                        {
+                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                          "description": "Glimmora: Despliega sus grandes pétalos repletos de toxinas y repele a los rivales con la ayuda de los Glimmet.\n\nMega-Glimmora: La acrecentada corola externa que se desprendió de su cuerpo ahora lo protege rodeándolo, a la vez que esparce fragmentos venenosos alrededor."
                         }
                       ]
                     }
@@ -43428,12 +43757,19 @@
                         {
                           "icon": "Pokémon_Perla_Reluciente Icono.png",
                           "description": "Ha estado durmiendo en magma subterráneo desde su temible contienda contra Kyogre en tiempos remotos."
+                        },
+                        {
+                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                          "description": "Groudon: Dicen que aumentó la superficie terrestre evaporando el agua. Fue un enemigo acérrimo de Kyogre.\n\nGroudon primigenio: Recuperó su forma original gracias al Prisma Rojo. Su cuerpo rebosa de energía en forma de magma incandescente."
                         }
                       ]
                     },
                     {
                       "name": "Heatran",
-                      "image": "Heatran.png",
+                      "images": [
+                        "Heatran.png",
+                        "Mega Heatran.png"
+                      ],
                       "description": "El Pokémon domo lava",
                       "imgWidth": 150,
                       "imgHeight": 150,
@@ -43506,6 +43842,10 @@
                         {
                           "icon": "Leyendas_Pokémon_Arceus Icono.png",
                           "description": "Cuentan las historias que nació del ardiente magma del Monte Corona. Su cuerpo de acero derretido supone toda una incógnita para nosotros."
+                        },
+                        {
+                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                          "description": "Heatran: Por su cuerpo circula sangre hirviente, similar al magma. Vive en cráteres de volcanes.\n\nMega-Heatran: Si se esfuerza al máximo, puede mantener a sus enemigos alejados al hacer que su cuerpo alcance temperaturas de 1,000,000 ºC."
                         }
                       ]
                     },
@@ -43536,6 +43876,10 @@
                         {
                           "icon": "Pokémon_Zafiro_Alfa Icono.png",
                           "description": "Expulsa vapor de agua por los brazos que tiene en la espalda. Sale a tal potencia que sería capaz de arrasar una montaña entera."
+                        },
+                        {
+                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                          "description": "Expulsa vapor de agua por los brazos que tiene en la espalda. Este sale con tanta potencia que es capaz de arrasar una montaña entera."
                         }
                       ]
                     },
@@ -43748,6 +44092,10 @@
                                 {
                                   "icon": "Pokémon Púrpura Icono.jpg",
                                   "description": "Evolucionó al portar una vieja armadura cargada de rencor. Despedaza a sus enemigos sin piedad alguna."
+                                },
+                                {
+                                  "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                  "description": "Si detecta la menor hostilidad hacia el Entrenador al que le juró lealtad, no dudará en resolverla a base de cuchilladas."
                                 }
                               ]
                             },
@@ -43770,6 +44118,10 @@
                                 {
                                   "icon": "Pokémon Púrpura Icono.jpg",
                                   "description": "Porta una armadura reforzada con energía psíquica e ígnea. Ataca lanzando bolas de fuego incandescentes."
+                                },
+                                {
+                                  "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                                  "description": "Aunque le juró lealtad a su Entrenador, suele entrenar en solitario para perfeccionar su dominio de la energía psíquica."
                                 }
                               ]
                             }
@@ -44593,7 +44945,7 @@
                             },
                             {
                               "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                              "description": "Es una transformación súbita de Carbink. Se dice que su cuerpo, que irradia destellos rosados, es lo más bello de este mundo."
+                              "description": "Diancie: Es una transformación súbita de Carbink. Se dice que su cuerpo, que irradia destellos rosados, es lo más bello de este mundo.\n\nMega-Diancie: Se conoce como la Princesa Real Rosada. El lustroso diamante que tiene en la frente es de nada más y nada menos que 2,000 quilates."
                             }
                           ]
                         }
@@ -45021,6 +45373,10 @@
                         {
                           "icon": "Pokémon Púrpura Icono.jpg",
                           "description": "Muchos Pokémon se arremolinan alrededor de Garganacl para lamer su sal rica en minerales."
+                        },
+                        {
+                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                          "description": "La sal de roca extraída de los Garganacl tiene altas propiedades curativas, por lo que resulta un complemento útil para una vida saludable."
                         }
                       ]
                     },
@@ -45109,6 +45465,10 @@
                         {
                           "icon": "Pokémon_Escudo_Icono.png",
                           "description": "Melmetal: Gracias a la inercia y la fuerza centrífuga, los puñetazos que propina con sus pesadas tuercas son los más potentes del mundo Pokémon.\n\nMelmetal Gigamax: El rayo de alto voltaje que emite por la abertura del abdomen puede vaporizar al instante el cuerpo de su contrincante."
+                        },
+                        {
+                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                          "description": "En la antigüedad, se le veneraba por su poder para crear hierro. Después de tres milenios, regresó misteriosamente."
                         }
                       ]
                     },
@@ -45233,7 +45593,7 @@
                         },
                         {
                           "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                          "description": "Tritura las rocas con su potente mandíbula. Sus ojos le permiten ver en la oscuridad del subsuelo."
+                          "description": "Steelix: Tritura las rocas con su potente mandíbula. Sus ojos le permiten ver en la oscuridad del subsuelo.\n\nMega-Steelix: Controla mediante el magnetismo las placas que se desprendieron de su duro cuerpo y las usa para protegerse de los ataques enemigos."
                         }
                       ]
                     },
@@ -45330,6 +45690,10 @@
                         {
                           "icon": "Pokémon Púrpura Icono.jpg",
                           "description": "Rodea al rival con cadenas de cristales de hielo y, una vez inmovilizado, lo congela al instante."
+                        },
+                        {
+                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                          "description": "Usa cadenas de cristales de hielo para atrapar a sus presas y congelarlas a temperaturas de hasta -100 °C."
                         }
                       ]
                     },
@@ -45501,6 +45865,10 @@
                         {
                           "icon": "Pokémon_Perla_Reluciente Icono.png",
                           "description": "Se dice que aumentó el nivel del mar a base de aguaceros. Ha estado durmiendo en una fosa marina."
+                        },
+                        {
+                          "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                          "description": "Kyogre: Pokémon Legendario que aumentó los mares con diluvios y maremotos. Fue un enemigo acérrimo de Groudon.\n\nKyogre primigenio: Experimentó una regresión a causa de la energía primigenia que albergaba el Prisma Azul. Su cuerpo parece estar compuesto de agua marina."
                         }
                       ]
                     }
@@ -45604,6 +45972,10 @@
                     {
                       "icon": "Pokémon Púrpura Icono.jpg",
                       "description": "Forma de Rotom: Desde hace mucho tiempo se estudia como fuente de energía motriz para un motor especial.\n\nRotom Calor: Asume esta forma cuando toma posesión de un horno eléctrico. Calcina los alrededores con el calor abrasador que emite y luego ríe felizmente.\n\nRotom Lavado: El modelo de lavadora del que Rotom puede tomar posesión ya no se fabrica, por lo que se cotiza a precios muy elevados.\n\nRotom Frío: El motor especial que hay dentro del frigorífico es la clave para que Rotom cambie de forma.\n\nRotom Ventilador: Rotom puede tomar posesión de una amplia selección de aparatos, pero el primero de ellos fue el ventilador.\n\nRotom Corte: Asume esta forma cuando toma posesión de un cortacésped. Corta las flores y el césped y luego se pavonea con orgullo de su trabajo."
+                    },
+                    {
+                      "icon": "Pokemon Leyendas Pokémon Z-A.png",
+                      "description": "Forma de Rotom: Su cuerpo está hecho de plasma. Puede infiltrarse en dispositivos electrónicos e inutilizarlos.\n\nRotom Calor: Tomó posesión de un horno eléctrico que funciona con un motor especial. Controla el fuego con habilidad.\n\nRotom Lavado: Tomó posesión de una lavadora que funciona con un motor especial. Intimida a sus oponentes con potentes chorros de agua.\n\nRotom Frío: Tomó posesión de un refrigerador que funciona con un motor especial. Utiliza su aire gélido para combatir.\n\nRotom Ventilador: Tomó posesión de un ventilador que funciona con un motor especial. Lanza a sus rivales por los aires con fuertes ráfagas.\n\nRotom Podadora: Tomó posesión de una podadora que funciona con un motor especial. Esparce por todos lados el césped que cortó."
                     }
                   ]
                 }
