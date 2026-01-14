@@ -28872,7 +28872,8 @@
                                                                                                   "name": "Meowstic",
                                                                                                   "images": [
                                                                                                     "Meowstic (hembra).png",
-                                                                                                    "Meowstic (macho).png"
+                                                                                                    "Meowstic (macho).png",
+                                                                                                    "Mega Meowstic.png"
                                                                                                   ],
                                                                                                   "description": "El Pokémon autocontrol.",
                                                                                                   "imgWidth": 150,
@@ -28917,7 +28918,7 @@
                                                                                                     },
                                                                                                     {
                                                                                                       "icon": "Pokemon Leyendas Pokémon Z-A.png",
-                                                                                                      "description": "Cuando percibe peligro, levanta las orejas y desata un poder psíquico capaz de elevar un camión de unas diez toneladas."
+                                                                                                      "description": "Meowstic macho: Cuando percibe peligro, levanta las orejas y desata un poder psíquico capaz de elevar un camión de unas diez toneladas.\n\nMeowstic hembra: Son ligeramente más agresivas y egoístas que los machos. Castigan sin piedad con sus poderes psíquicos a quienes las hagan enojar.\n\nMega-Meowstic: Puede expandir y comprimir cualquier cosa con sus poderes psíquicos, e incluso distorsionar el espacio para desconcertar al rival."
                                                                                                     }
                                                                                                   ]
                                                                                                 },

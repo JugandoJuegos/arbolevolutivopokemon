@@ -403,22 +403,33 @@ Las descripciones de la Pokédex y las imágenes de los Pokémon utilizadas en e
 </div>
 
 <script src="https://d3js.org/d3.v7.min.js"></script>
-<script>
 
+<script>
+/* ============================
+   Image loader IIFE (mejorado)
+   ============================ */
 (function(){
   const loader = document.getElementById('pageLoader');
   const progressBar = document.getElementById('progressBar');
   const counter = document.getElementById('loaderCounter');
   const hint = document.getElementById('loaderHint');
-  const MAX_WAIT_MS = 60000;
-  const OBSERVE_NEW_MS = 8000;
 
-  // tracked: Map<resolvedUrl, { state: 'pending'|'loaded'|'error' }>
-  const tracked = new Map();
+  const MAX_WAIT_MS = 120000; // timeout mayor por si tarda mucho
+  const OBSERVE_NEW_MS = 10000;
+
+  // Estado interno
+  const tracked = new Map(); // url -> { state: 'pending'|'loaded'|'error' }
   let total = 0, loaded = 0;
   let lastAddedAt = Date.now();
   let observer = null;
   let timeoutHandle = null;
+  let inactivityInterval = null;
+
+  // sincronización con buildTree
+  let treeBuilt = false;
+  let pendingFinish = false;
+  let finished = false; // guard para markDone único
+  let infoShown = false;
 
   function resolveUrl(url){
     if(!url) return null;
@@ -431,29 +442,61 @@ Las descripciones de la Pokédex y las imágenes de los Pokémon utilizadas en e
 
   function updateUI(){
     try {
-      progressBar.style.width = (total === 0 ? 0 : Math.round((loaded/total)*100)) + '%';
+      progressBar.style.width = (total === 0 ? '0%' : Math.round((loaded/total)*100) + '%');
       counter.textContent = `${loaded} / ${total}`;
-      if(total > 600) hint.textContent = "Muchos Pókemon — puede tardar más. Si no avanza, espera o recarga.";
+      if(total > 600) hint.textContent = "Muchos Pókemon — puede tardar más. Si no avanza, intenta recargar.";
       else hint.textContent = "Creando Mew´s tardar varios segundos.";
     } catch(e){}
   }
 
-  function markDone(){
+  function safeShowInfoOnce(){
+    if(infoShown) return;
+    infoShown = true;
+    // Intentamos abrir modal por handlers ya definidos; si no existen, abrimos directamente.
+    try {
+      if(typeof window.openImportantInfo === 'function') return window.openImportantInfo();
+    } catch(e){}
+    const infoBtn = document.getElementById('infoBtn');
+    if(infoBtn && typeof infoBtn.onclick === 'function') {
+      try { infoBtn.onclick(); return; } catch(e){}
+    }
+    const modal = document.getElementById('infoModal');
+    if(modal) {
+      modal.style.display = 'block';
+      modal.setAttribute('aria-hidden','false');
+      setTimeout(()=>{ /* update scroll hint if needed */ }, 60);
+    }
+  }
+
+  function markDoneInternal(){
+    if(finished) return;
+    finished = true;
     // desconectar observer/timeouts
     if(observer){ try{ observer.disconnect(); }catch(e){} observer = null; }
     if(timeoutHandle){ clearTimeout(timeoutHandle); timeoutHandle = null; }
+    if(inactivityInterval){ clearInterval(inactivityInterval); inactivityInterval = null; }
 
+    // animación de ocultado
     loader.classList.add('hidden');
     setTimeout(()=> {
       try { loader.style.display = 'none'; } catch(e){}
-      setTimeout(()=> {
-        if(typeof openInfoModal === 'function') {
-          try { openInfoModal(); } catch(e){ document.getElementById('infoBtn').click(); }
-        } else {
-          document.getElementById('infoBtn').click();
-        }
-      }, 160);
+      // mostrar modal info sólo una vez
+      safeShowInfoOnce();
     }, 480);
+  }
+
+  function tryFinishIfReady(){
+    // Si estamos listos y el árbol está construido -> terminar
+    if(finished) return;
+    // condición: todas las imágenes han sido procesadas (loaded o error) OR no imágenes y treeBuilt true
+    const allProcessed = (total === 0) ? true : (loaded >= total);
+    if(allProcessed && treeBuilt){
+      // pequeño retardo visual
+      setTimeout(()=> markDoneInternal(), 260);
+    } else {
+      // si allProcessed pero tree no construido, marcamos pendiente
+      if(allProcessed && !treeBuilt) pendingFinish = true;
+    }
   }
 
   function markImageState(resolved, state){
@@ -465,10 +508,8 @@ Las descripciones de la Pokédex y las imágenes de los Pokémon utilizadas en e
     total = tracked.size;
     if(loaded > total) loaded = total;
     updateUI();
-    if(loaded >= total && total > 0) {
-      // todas listas
-      cleanupAndFinish();
-    }
+    // Si ya todas procesadas, intentar finalizar (pero solo si treeBuilt)
+    tryFinishIfReady();
   }
 
   function trackUrl(url){
@@ -480,11 +521,14 @@ Las descripciones de la Pokédex y las imágenes de los Pokémon utilizadas en e
     total = Math.max(total, tracked.size);
     updateUI();
 
+    lastAddedAt = Date.now();
+    // reiniciar timeout cuando se añade imagen
+    startTimeout();
+
     // crear Image para que el navegador cargue
     const img = new Image();
     img.onload = () => markImageState(r,'loaded');
     img.onerror = () => markImageState(r,'error');
-    // Iniciar carga
     img.src = r;
 
     // si ya está cacheado
@@ -497,21 +541,12 @@ Las descripciones de la Pokédex y las imágenes de los Pokémon utilizadas en e
 
   function addMany(urls){
     if(!urls || !urls.length) return;
-    urls.forEach(u => { try { trackUrl(u); lastAddedAt = Date.now(); } catch(e){} });
-  }
-
-  function cleanupAndFinish(){
-    if(observer) {
-      try { observer.disconnect(); } catch(e){}
-      observer = null;
-    }
-    if(timeoutHandle) { clearTimeout(timeoutHandle); timeoutHandle = null; }
-    // Dar un pequeño retardo para suavizar la UI
-    setTimeout(()=> markDone(), 260);
+    urls.forEach(u => { try { trackUrl(u); } catch(e){} });
   }
 
   function startTimeout(){
     if(timeoutHandle) clearTimeout(timeoutHandle);
+    // timeout más generoso pero reiniciable
     timeoutHandle = setTimeout(()=> {
       // marcar pendientes como error
       tracked.forEach((v,k) => {
@@ -520,11 +555,15 @@ Las descripciones de la Pokédex y las imágenes de los Pokémon utilizadas en e
       loaded = Array.from(tracked.values()).filter(v=>v.state === 'loaded' || v.state === 'error').length;
       total = tracked.size;
       updateUI();
-      cleanupAndFinish();
+      // si el árbol ya está construido, finalizamos; si no, marcamos pendiente
+      if(treeBuilt) {
+        tryFinishIfReady();
+      } else {
+        pendingFinish = true;
+      }
     }, MAX_WAIT_MS);
   }
 
-  // MutationObserver para detectar imágenes añadidas por otros scripts/SVG
   function startObserver(){
     if(observer) return;
     try {
@@ -537,11 +576,11 @@ Las descripciones de la Pokédex y las imágenes de los Pokémon utilizadas en e
               const tn = n.tagName && n.tagName.toLowerCase();
               if(tn === 'img' || tn === 'image'){
                 const url = getUrlFromNode(n);
-                if(url){ trackUrl(url); any = true; lastAddedAt = Date.now(); }
+                if(url){ trackUrl(url); any = true; }
               }
               const imgs = n.querySelectorAll && n.querySelectorAll('img, image');
               if(imgs && imgs.length){
-                imgs.forEach(ii => { const url = getUrlFromNode(ii); if(url){ trackUrl(url); any = true; lastAddedAt = Date.now(); } });
+                imgs.forEach(ii => { const url = getUrlFromNode(ii); if(url){ trackUrl(url); any = true; } });
               }
             });
           }
@@ -550,7 +589,7 @@ Las descripciones de la Pokédex y las imágenes de los Pokémon utilizadas en e
             const tn = targ.tagName && targ.tagName.toLowerCase();
             if(tn === 'img' || tn === 'image'){
               const url = getUrlFromNode(targ);
-              if(url){ trackUrl(url); any = true; lastAddedAt = Date.now(); }
+              if(url){ trackUrl(url); any = true; }
             }
           }
         }
@@ -562,16 +601,19 @@ Las descripciones de la Pokédex y las imágenes de los Pokémon utilizadas en e
       try { observer.observe(document.body, { childList:true, subtree:true, attributes:true, attributeFilter:['src','href'] }); } catch(e){}
     }
 
-    // Inactividad -> desconectar observer
-    const inactivityInterval = setInterval(()=>{
-      if(!observer) { clearInterval(inactivityInterval); return; }
+    // Inactividad -> desconectar observer pasado un umbral (para no vigilar eternamente)
+    if(inactivityInterval) clearInterval(inactivityInterval);
+    inactivityInterval = setInterval(()=>{
+      if(!observer) { clearInterval(inactivityInterval); inactivityInterval = null; return; }
       if(Date.now() - lastAddedAt > OBSERVE_NEW_MS) {
         try { observer.disconnect(); } catch(e){}
         observer = null;
         clearInterval(inactivityInterval);
+        inactivityInterval = null;
       }
     }, 700);
 
+    // arrancar timeout (o reiniciarlo)
     startTimeout();
   }
 
@@ -588,7 +630,7 @@ Las descripciones de la Pokédex y las imágenes de los Pokémon utilizadas en e
     return null;
   }
 
-  // expose API
+  // API expuesta
   window.__imageLoader = {
     add: function(url){
       try { trackUrl(url); lastAddedAt = Date.now(); startObserver(); } catch(e){ console.error(e); }
@@ -597,10 +639,29 @@ Las descripciones de la Pokédex y las imágenes de los Pokémon utilizadas en e
       try { addMany(Array.isArray(urls)?urls:[]); startObserver(); } catch(e){ console.error(e); }
     },
     getStatus: function(){ return { total: tracked.size, loaded }; },
-    // no exportamos markImageState públicamente porque lo maneja internamente
+
+    // llamada desde buildTree cuando se ha terminado de renderizar el árbol
+    notifyTreeBuilt: function(){
+      try {
+        treeBuilt = true;
+        // si ya estaban todas las imágenes procesadas, finalizar
+        if(tracked.size === 0 || loaded >= tracked.size) {
+          tryFinishIfReady();
+        } else if(pendingFinish) {
+          // si previamente timeout marcó pendiente, intentamos terminar
+          tryFinishIfReady();
+        }
+      } catch(e){ console.error(e); }
+    },
+
+    // helper para pruebas/depuración
+    _debugState: function(){ return { total: tracked.size, loaded, treeBuilt, pendingFinish, finished }; },
+
+    // función para abrir info desde fuera (si se desea)
+    openInfo: function(){ safeShowInfoOnce(); }
   };
 
-  // Iniciar loader si el DOM ya está listo (para que la pantalla de carga se muestre)
+  // Iniciar loader (observer) si DOM ya listo (para mostrar pantalla de carga)
   if(document.readyState === 'complete' || document.readyState === 'interactive'){
     setTimeout(()=> { startObserver(); updateUI(); }, 8);
   } else {
@@ -608,6 +669,9 @@ Las descripciones de la Pokédex y las imágenes de los Pokémon utilizadas en e
   }
 
 })();
+</script>
+
+<script>
 
 (function waitForLoaderQueue(){
   if(window.__imageLoader && window.__pendingImageRegistration && window.__pendingImageRegistration.length){
@@ -664,31 +728,23 @@ if (msg.type === 'data') {
   DATA = msg.data;
   const images = Array.isArray(msg.images) ? msg.images : [];
 
-  // Si el loader está listo, registramos las URLs con él para que empiece a trackear/cargar.
-  // Si no está listo, guardamos en una cola y las procesamos cuando se registre.
   (function registerImagesWithLoader(imgs){
     if(!imgs || !imgs.length) {
-      // igual construimos el árbol aun si no hay imgs
       try { buildTree(DATA); } catch(e){ console.error(e); }
       return;
     }
 
-    // Si __imageLoader ya existe, úsalo
     if(window.__imageLoader && typeof window.__imageLoader.addMany === 'function'){
       try {
         window.__imageLoader.addMany(imgs);
       } catch(e){ console.error('error registrando imágenes en loader:', e); }
-      // Construimos el árbol (puede añadir <image> SVG; loader seguirá trackeando)
       try { buildTree(DATA); } catch(e){ console.error(e); }
       return;
     }
 
-    // Si el loader aún no existe — guardamos en una cola y esperaremos a que se registre.
     window.__pendingImageRegistration = window.__pendingImageRegistration || [];
     window.__pendingImageRegistration.push(...imgs);
 
-    // Intentamos construir igual el árbol (si quieres que wait hasta que loader exista,
-    // cambia esto para invocar buildTree más tarde). Por defecto construimos ahora.
     try { buildTree(DATA); } catch(e){ console.error(e); }
   })(images);
 }
@@ -700,109 +756,115 @@ dataWorker.postMessage({ cmd: 'load', url: 'data.json' });
 
 /* =================== buildTree(data) =================== */
 function buildTree(data) {
+  // Obtener el elemento contenedor y sus dimensiones reales en pantalla
+  const treeEl = document.getElementById('tree');
+  const containerRect = treeEl.getBoundingClientRect();
+  const containerWidth = Math.max(1000, Math.floor(containerRect.width || window.innerWidth * 0.66));
+  const containerHeight = Math.max(700, Math.floor(containerRect.height || window.innerHeight));
+
   const container = d3.select("#tree");
-  const width  = Math.max(1000, window.innerWidth*0.66);
-  const height = Math.max(700, window.innerHeight);
 
   // Limpiar svg viejo
   container.selectAll("svg").remove();
 
+  // Usamos las dimensiones reales para el viewBox
   const svg = container.append("svg")
-    .attr("viewBox",`0 0 ${width} ${height}`)
-    .style("width","100%")
-    .style("height","100%")
-    .style("touch-action","none");
+    .attr("viewBox", `0 0 ${containerWidth} ${containerHeight}`)
+    .style("width", "100%")
+    .style("height", "100%")
+    .style("touch-action", "none");
 
   const g = svg.append("g");
-  const zoom = d3.zoom().scaleExtent([0.25,4]).on("zoom", (event)=> g.attr("transform", event.transform));
+  const zoom = d3.zoom().scaleExtent([0.25, 4]).on("zoom", (event) => g.attr("transform", event.transform));
   svg.call(zoom);
 
   const root = d3.hierarchy(data);
-  d3.tree().size([width-300, 0])(root);
+  d3.tree().size([containerWidth - 300, 0])(root);
 
   const defaultLen = 120;
-  function assignY(n){ if(!n.children) return; n.children.forEach(c=>{ c.y = n.y + (c.data.linkLength || defaultLen); assignY(c); }); }
+  function assignY(n) { if (!n.children) return; n.children.forEach(c => { c.y = n.y + (c.data.linkLength || defaultLen); assignY(c); }); }
   root.y = 0; assignY(root);
 
-  function assignShift(n){ const parentShift = n.parent ? (n.parent.shift||0) : 0; n.shift = parentShift + (n.data.xShift||0); if(n.children) n.children.forEach(assignShift); }
+  function assignShift(n) { const parentShift = n.parent ? (n.parent.shift || 0) : 0; n.shift = parentShift + (n.data.xShift || 0); if (n.children) n.children.forEach(assignShift); }
   assignShift(root);
 
   const xOffset = 150;
-  root.each(d=>{ d.cx = d.x + xOffset + (d.shift||0); d.cy = height - 60 - d.y; });
+  // calculamos usando containerWidth/containerHeight para mantener coherencia con lo visible
+  root.each(d => { d.cx = d.x + xOffset + (d.shift || 0); d.cy = containerHeight - 60 - d.y; });
 
-  const linkGen = d3.linkVertical().x(d=>d.x).y(d=>d.y);
+  const linkGen = d3.linkVertical().x(d => d.x).y(d => d.y);
 
-  g.selectAll(".link").data(root.links()).enter().append("path").attr("class","link").attr("d", d=>{
-    const s=d.source, t=d.target;
+  g.selectAll(".link").data(root.links()).enter().append("path").attr("class", "link").attr("d", d => {
+    const s = d.source, t = d.target;
     let sY = s.cy;
-    if(s.data && s.data.isRing) sY = s.cy - (s.data.circleRadius||24) - ((s.data.circleStrokeWidth||6)/2);
+    if (s.data && s.data.isRing) sY = s.cy - (s.data.circleRadius || 24) - ((s.data.circleStrokeWidth || 6) / 2);
     let tY = t.cy;
-    if(t.data && typeof t.data.endOffset==="number") tY = t.cy + t.data.endOffset;
-    if(t.data && t.data.isRing) tY = t.cy + (t.data.circleRadius||24) + ((t.data.circleStrokeWidth||6)/2);
-    return linkGen({source:{x:s.cx,y:sY}, target:{x:t.cx,y:tY}});
+    if (t.data && typeof t.data.endOffset === "number") tY = t.cy + t.data.endOffset;
+    if (t.data && t.data.isRing) tY = t.cy + (t.data.circleRadius || 24) + ((t.data.circleStrokeWidth || 6) / 2);
+    return linkGen({ source: { x: s.cx, y: sY }, target: { x: t.cx, y: tY } });
   })
-    .attr("fill","none")
-    .attr("stroke", d=>d.target.data.linkColor || "#ffea00")
-    .attr("stroke-width", d=>d.target.data.linkWidth || 10)
-    .attr("stroke-linecap","butt")
-    .attr("stroke-linejoin","round")
-    .style("mix-blend-mode","normal")
-    .style("filter","none")
-    .style("shape-rendering","geometricPrecision");
+    .attr("fill", "none")
+    .attr("stroke", d => d.target.data.linkColor || "#ffea00")
+    .attr("stroke-width", d => d.target.data.linkWidth || 10)
+    .attr("stroke-linecap", "butt")
+    .attr("stroke-linejoin", "round")
+    .style("mix-blend-mode", "normal")
+    .style("filter", "none")
+    .style("shape-rendering", "geometricPrecision");
 
   const nodes = root.descendants();
-  const nodeG = g.selectAll(".node").data(nodes).enter().append("g").attr("class","node").attr("transform", d=>`translate(${d.cx},${d.cy})`);
+  const nodeG = g.selectAll(".node").data(nodes).enter().append("g").attr("class", "node").attr("transform", d => `translate(${d.cx},${d.cy})`);
 
-  nodeG.filter(d=>d.data.isRing).append("circle")
-    .attr("class","ring")
-    .attr("r", d=>d.data.circleRadius || 24)
-    .attr("stroke", d=>d.data.linkColor || "#ffea00")
-    .attr("stroke-width", d=>d.data.circleStrokeWidth || 6)
-    .attr("fill","none");
+  nodeG.filter(d => d.data.isRing).append("circle")
+    .attr("class", "ring")
+    .attr("r", d => d.data.circleRadius || 24)
+    .attr("stroke", d => d.data.linkColor || "#ffea00")
+    .attr("stroke-width", d => d.data.circleStrokeWidth || 6)
+    .attr("fill", "none");
 
-  nodeG.filter(d=>d.data.isRing && d.data.circleChild).each(function(d){
+  nodeG.filter(d => d.data.isRing && d.data.circleChild).each(function (d) {
     const ch = d.data.circleChild;
     d3.select(this).append("image")
       .attr("href", ch.image)
-      .attr("width",  ch.imgWidth  || (d.data.circleRadius*1.2))
-      .attr("height", ch.imgHeight || (d.data.circleRadius*1.2))
-      .attr("x", -(ch.imgWidth || (d.data.circleRadius*1.2))/2)
-      .attr("y", -(ch.imgHeight || (d.data.circleRadius*1.2))/2)
-      .style("cursor","pointer")
-      .on("mouseover",(ev)=>showTooltip(ev,d))
-      .on("mousemove",(ev)=>moveTooltip(ev))
-      .on("mouseout",hideTooltip)
-      .on("click",()=>showPanel(d));
+      .attr("width", ch.imgWidth || (d.data.circleRadius * 1.2))
+      .attr("height", ch.imgHeight || (d.data.circleRadius * 1.2))
+      .attr("x", -(ch.imgWidth || (d.data.circleRadius * 1.2)) / 2)
+      .attr("y", -(ch.imgHeight || (d.data.circleRadius * 1.2)) / 2)
+      .style("cursor", "pointer")
+      .on("mouseover", (ev) => showTooltip(ev, d))
+      .on("mousemove", (ev) => moveTooltip(ev))
+      .on("mouseout", hideTooltip)
+      .on("click", () => showPanel(d));
   });
 
-  nodeG.filter(d=> (d.data.image || (d.data.images && d.data.images.length)) && !d.data.isRing).append("image")
-    .attr("href", d=> d.data.image || d.data.images[0])
-    .attr("width", d=>d.data.imgWidth || 40)
-    .attr("height", d=>d.data.imgHeight || 40)
-    .attr("x", d=>-(d.data.imgWidth || 40)/2)
-    .attr("y", d=>-(d.data.imgHeight || 40)/2)
-    .style("cursor","pointer")
-    .on("mouseover",(ev,d)=>showTooltip(ev,d))
-    .on("mousemove",(ev)=>moveTooltip(ev))
-    .on("mouseout",hideTooltip)
-    .on("click",(ev,d)=>showPanel(d));
+  nodeG.filter(d => (d.data.image || (d.data.images && d.data.images.length)) && !d.data.isRing).append("image")
+    .attr("href", d => d.data.image || d.data.images[0])
+    .attr("width", d => d.data.imgWidth || 40)
+    .attr("height", d => d.data.imgHeight || 40)
+    .attr("x", d => -(d.data.imgWidth || 40) / 2)
+    .attr("y", d => -(d.data.imgHeight || 40) / 2)
+    .style("cursor", "pointer")
+    .on("mouseover", (ev, d) => showTooltip(ev, d))
+    .on("mousemove", (ev) => moveTooltip(ev))
+    .on("mouseout", hideTooltip)
+    .on("click", (ev, d) => showPanel(d));
 
   const tooltip = document.getElementById('tooltip');
-  function showTooltip(evt,d){ tooltip.innerHTML = `<strong>${d.data.name || ''}</strong>\n${d.data.description || ""}`; tooltip.style.opacity = 1; moveTooltip(evt); }
-  function moveTooltip(evt){ tooltip.style.left = (evt.pageX + 12) + "px"; tooltip.style.top = (evt.pageY - 8) + "px"; }
-  function hideTooltip(){ tooltip.style.opacity = 0; }
+  function showTooltip(evt, d) { tooltip.innerHTML = `<strong>${d.data.name || ''}</strong>\n${d.data.description || ""}`; tooltip.style.opacity = 1; moveTooltip(evt); }
+  function moveTooltip(evt) { tooltip.style.left = (evt.pageX + 12) + "px"; tooltip.style.top = (evt.pageY - 8) + "px"; }
+  function hideTooltip() { tooltip.style.opacity = 0; }
 
-  // panel / mini bar
-  function adjustCardTopForMiniBar(){
+  // panel / mini bar (mantengo igual)
+  function adjustCardTopForMiniBar() {
     const cardTop = document.querySelector('.cardTop');
     const miniBar = document.getElementById('miniBar');
-    if(!cardTop || !miniBar) return;
+    if (!cardTop || !miniBar) return;
     const needed = 60;
     cardTop.style.paddingBottom = `${needed}px`;
     miniBar.style.maxWidth = `${Math.max(160, cardTop.clientWidth - 32)}px`;
   }
 
-  function showPanel(d){
+  function showPanel(d) {
     const panel = document.getElementById('detailPanel');
     const pokemonTopWrap = document.getElementById('pokemonTopWrap');
     const miniBar = document.getElementById('miniBar');
@@ -814,7 +876,7 @@ function buildTree(data) {
     nameOverlay.style.display = 'none';
 
     nameOverlay.textContent = d.data.name || '';
-    nameOverlay.style.display = (d.data.name && String(d.data.name).trim().length>0) ? 'block' : 'none';
+    nameOverlay.style.display = (d.data.name && String(d.data.name).trim().length > 0) ? 'block' : 'none';
 
     const imagesToShow = Array.isArray(d.data.images) && d.data.images.length ? d.data.images : (d.data.image ? [d.data.image] : (d.data.circleChild && d.data.circleChild.image ? [d.data.circleChild.image] : []));
     imagesToShow.forEach(src => {
@@ -826,30 +888,30 @@ function buildTree(data) {
 
     descEl.textContent = d.data.description || "Sin descripción.";
 
-    if(Array.isArray(d.data.variations) && d.data.variations.length){
-      d.data.variations.forEach((v,i)=>{
+    if (Array.isArray(d.data.variations) && d.data.variations.length) {
+      d.data.variations.forEach((v, i) => {
         const cell = document.createElement('div');
         cell.className = 'miniIcon';
-        cell.setAttribute('role','button');
-        cell.setAttribute('tabindex','0');
-        if (v.icon && (/\.(png|jpe?g|svg)$/i).test(v.icon)){
+        cell.setAttribute('role', 'button');
+        cell.setAttribute('tabindex', '0');
+        if (v.icon && (/\.(png|jpe?g|svg)$/i).test(v.icon)) {
           const img = document.createElement('img');
           img.src = v.icon;
           img.alt = v.description || '';
           cell.appendChild(img);
         } else {
-          cell.textContent = v.label || v.icon || (`V${i+1}`);
+          cell.textContent = v.label || v.icon || (`V${i + 1}`);
         }
         cell.title = v.description || "";
         cell.onclick = () => {
-          Array.from(miniBar.children).forEach(c=>c.classList.remove('active'));
+          Array.from(miniBar.children).forEach(c => c.classList.remove('active'));
           cell.classList.add('active');
           descEl.textContent = v.description || descEl.textContent;
           adjustCardTopForMiniBar();
         };
-        cell.onkeydown = (ev) => { if(ev.key === 'Enter' || ev.key === ' ') cell.onclick(); };
+        cell.onkeydown = (ev) => { if (ev.key === 'Enter' || ev.key === ' ') cell.onclick(); };
         miniBar.appendChild(cell);
-        if(i===0) cell.classList.add('active');
+        if (i === 0) cell.classList.add('active');
       });
     } else {
       const placeholder = document.createElement('div');
@@ -859,16 +921,14 @@ function buildTree(data) {
     }
 
     panel.style.display = 'block';
-    requestAnimationFrame(()=>{
+    requestAnimationFrame(() => {
       adjustCardTopForMiniBar();
-      // actualizamos posiciones de botones globalmente
       if (typeof window.updateFloatingBtnPosition === 'function') window.updateFloatingBtnPosition();
     });
   }
 
-  function closePanel(){ document.getElementById('detailPanel').style.display = 'none'; if (typeof window.updateFloatingBtnPosition === 'function') window.updateFloatingBtnPosition(); }
+  function closePanel() { document.getElementById('detailPanel').style.display = 'none'; if (typeof window.updateFloatingBtnPosition === 'function') window.updateFloatingBtnPosition(); }
 
-  // Exponer funciones globales para que los botones en HTML funcionen (onclick="closePanel()")
   window.showPanel = showPanel;
   window.closePanel = closePanel;
 
@@ -910,80 +970,63 @@ function buildTree(data) {
   fillList(root, nodeListEl);
 
   nodeListEl.addEventListener('click', (ev) => {
-  const li = ev.target.closest('li');
-  if (!li) return;
-  const name = li.firstChild.textContent.trim();
-  if (!name) return;
+    const li = ev.target.closest('li');
+    if (!li) return;
+    const name = li.firstChild.textContent.trim();
+    if (!name) return;
 
-  // Buscar el nodo objetivo (nodes está en scope)
-  const targetNode = nodes.find(n => n.data.name && n.data.name.trim() === name);
-  if (!targetNode) return;
+    const targetNode = nodes.find(n => n.data.name && n.data.name.trim() === name);
+    if (!targetNode) return;
 
-  // calcular transform objetivo
-  const currentTransform = d3.zoomTransform(svg.node());
-  const currentScale = currentTransform.k || 1;
+    // dimensiones reales del contenedor en el momento del clic
+    const rect = treeEl.getBoundingClientRect();
+    const visibleW = rect.width || containerWidth;
+    const visibleH = rect.height || containerHeight;
 
-  // Deseado: mantener la escala actual, centrar en targetNode
-  const tx = (width / 2) - targetNode.cx * currentScale;
-  const ty = (height / 2) - targetNode.cy * currentScale;
-  const targetTransform = d3.zoomIdentity.translate(tx, ty).scale(currentScale);
+    // transform actual
+    const currentTransform = d3.zoomTransform(svg.node());
+    const currentScale = currentTransform.k || 1;
 
-  // OPTIMIZACIÓN: ocultar imágenes durante la animación para reducir repaints
-  // 1) seleccionamos imágenes dentro del SVG (elementos <image>), y también <img> internos si aplica
-  const svgNode = svg.node();
-  const svgImgs = Array.from(svgNode.querySelectorAll('image'));
-  // Si tienes también <img> dentro del SVG wrapper (no debería), puedes incluirlas:
-  // const htmlImgs = Array.from(document.querySelectorAll('#tree img'));
-  // const allImgs = svgImgs.concat(htmlImgs);
-  const allImgs = svgImgs;
+    // centrar usando tamaño visible (mantener escala)
+    const tx = (visibleW / 2) - targetNode.cx * currentScale;
+    const ty = (visibleH / 2) - targetNode.cy * currentScale;
+    const targetTransform = d3.zoomIdentity.translate(tx, ty).scale(currentScale);
 
-  // Guardamos visibilidad previa y desactivamos puntero
-  allImgs.forEach(img => {
-    try {
-      img.setAttribute('data-prev-visibility', img.style.visibility || '');
-      img.style.visibility = 'hidden';
-      img.style.pointerEvents = 'none';
-    } catch(e){}
-  });
-
-  // Ayuda al compositor: pide al navegador que use composición de GPU para la g transformada
-  const gNode = g.node();
-  const prevWill = gNode.style.willChange || '';
-  gNode.style.willChange = 'transform';
-
-  // Opcional: corta interacciones durante transición
-  svgNode.style.pointerEvents = 'none';
-
-  // Ejecutamos la transición (duración más corta para menor trabajo)
-  const TRANS_DUR = 600; // ms (ajustable; menor = menos trabajo)
-  svg.transition()
-    .duration(TRANS_DUR)
-    .call(zoom.transform, targetTransform)
-    .on('end', () => {
-      // restaurar visibilidad y puntero
-      allImgs.forEach(img => {
-        try {
-          const prev = img.getAttribute('data-prev-visibility');
-          img.style.visibility = prev || '';
-          img.style.pointerEvents = '';
-          img.removeAttribute('data-prev-visibility');
-        } catch(e){}
-      });
-
-      // restaurar will-change y puntero del svg
-      try { gNode.style.willChange = prevWill; } catch(e){}
-      svgNode.style.pointerEvents = '';
-
-      // forzar actualización ligera para asegurar que todo quede estable
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          // nada más, solo forzar dos frames
-        });
-      });
+    // optimizaciones de transición (igual que antes)
+    const svgNode = svg.node();
+    const svgImgs = Array.from(svgNode.querySelectorAll('image'));
+    const allImgs = svgImgs;
+    allImgs.forEach(img => {
+      try {
+        img.setAttribute('data-prev-visibility', img.style.visibility || '');
+        img.style.visibility = 'hidden';
+        img.style.pointerEvents = 'none';
+      } catch (e) { }
     });
 
-  // También consideramos cancelar la transición si se hace otra acción:
-});
+    const gNode = g.node();
+    const prevWill = gNode.style.willChange || '';
+    gNode.style.willChange = 'transform';
+    svgNode.style.pointerEvents = 'none';
+
+    const TRANS_DUR = 600;
+    svg.transition()
+      .duration(TRANS_DUR)
+      .call(zoom.transform, targetTransform)
+      .on('end', () => {
+        allImgs.forEach(img => {
+          try {
+            const prev = img.getAttribute('data-prev-visibility');
+            img.style.visibility = prev || '';
+            img.style.pointerEvents = '';
+            img.removeAttribute('data-prev-visibility');
+          } catch (e) { }
+        });
+        try { gNode.style.willChange = prevWill; } catch (e) { }
+        svgNode.style.pointerEvents = '';
+      });
+  });
+
 
   // Botones flotantes: reasignamos handlers de forma determinista (sobrescribe handlers previos)
   const floatingBtn = document.getElementById('toggleListBtnFloating');
@@ -1024,7 +1067,6 @@ function buildTree(data) {
   // Hacemos global la función para evitar conflictos
   window.updateFloatingBtnPosition = updateFloatingBtnPosition;
 
-  // Reasignamos onclick (sobrescribe eventListeners previos)
   if(floatingBtn){
     floatingBtn.onclick = (e) => {
       e && e.stopPropagation();
@@ -1043,15 +1085,20 @@ function buildTree(data) {
     };
   }
 
-  if(infoBtn){
-    infoBtn.onclick = (e) => { e && e.stopPropagation(); openInfo(); };
-  }
-
-  function openInfo(){
+  // Hacemos que openInfo sea global para que el loader pueda llamarlo
+  window.openImportantInfo = function(){
     if(!infoModal) return;
     infoModal.style.display = 'block';
     infoModal.setAttribute('aria-hidden','false');
     setTimeout(()=>updateScrollHint(),60);
+  };
+
+  if(infoBtn){
+    infoBtn.onclick = (e) => { e && e.stopPropagation(); window.openImportantInfo(); };
+  }
+
+  function openInfo(){
+    window.openImportantInfo();
   }
   function closeInfo(){
     if(!infoModal) return;
@@ -1062,11 +1109,9 @@ function buildTree(data) {
   if(infoOverlay) infoOverlay.onclick = closeInfo;
   document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape' && infoModal && infoModal.style.display === 'block'){ closeInfo(); }});
 
-  // Reasignar onclick del botón cerrar detalle para asegurar enlace correcto
   const detailCloseBtn = document.querySelector('.detailCloseBtn');
   if(detailCloseBtn) detailCloseBtn.onclick = () => { try{ window.closePanel(); }catch(e){} };
 
-  // scrollHint helpers
   const modalCard = document.querySelector('#infoModal .modalCard');
   const scrollHint = document.getElementById('scrollHint');
   function updateScrollHint(){
@@ -1079,7 +1124,6 @@ function buildTree(data) {
   if(modalCard) modalCard.addEventListener('scroll', updateScrollHint);
   window.addEventListener('resize', () => setTimeout(updateScrollHint, 80));
 
-  // Observador para actualizar posiciones cuando el contenido del panel cambie
   try {
     const obs = new MutationObserver(()=>{ updateFloatingBtnPosition(); adjustCardTopForMiniBar(); });
     const dp = document.getElementById('detailPanel');
@@ -1089,13 +1133,24 @@ function buildTree(data) {
   window.addEventListener('resize', ()=>{ updateFloatingBtnPosition(); adjustCardTopForMiniBar(); });
   window.addEventListener('scroll', updateFloatingBtnPosition);
 
-  // Centrar en root al final
-  (function centerOnRoot(){
-    const tx = (width/2) - (root.cx||0);
-    const ty = (height/2) - (root.cy||0);
-    svg.call(zoom.transform, d3.zoomIdentity.translate(tx,ty).scale(1));
-    setTimeout(()=>{ updateFloatingBtnPosition(); adjustCardTopForMiniBar(); },50);
+  // Centrar en root al final (usa tamaño real visible)
+  (function centerOnRoot() {
+    const rect = treeEl.getBoundingClientRect();
+    const visibleW = rect.width || containerWidth;
+    const visibleH = rect.height || containerHeight;
+    const tx = (visibleW / 2) - (root.cx || 0);
+    const ty = (visibleH / 2) - (root.cy || 0);
+    svg.call(zoom.transform, d3.zoomIdentity.translate(tx, ty).scale(1));
+    setTimeout(() => { updateFloatingBtnPosition(); adjustCardTopForMiniBar(); }, 50);
   })();
+
+  // Avisamos al loader que el árbol terminó de construirse
+  try {
+    if (window.__imageLoader && typeof window.__imageLoader.notifyTreeBuilt === 'function') {
+      window.__imageLoader.notifyTreeBuilt();
+    }
+  } catch (e) { console.error(e); }
+
 } // end buildTree
 </script>
 </body>
